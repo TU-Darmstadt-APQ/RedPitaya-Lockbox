@@ -1,0 +1,38 @@
+Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet,MFP,MFN,Config
+1,"Unpolarized capacitor, small symbol",C_Small,C3 C4 C13,100n,C_1206,3,,C1206C104K3GEC7210,KEMET,
+2,"Unpolarized capacitor, small symbol",C_Small,C14 C15 C18 C19 C22 C23 C31,100n,C_0603,7,,CC0603ZPY5V9BB104,Yageo,
+3,"Unpolarized capacitor, small symbol",C_Small,C29,10n,C_0603,1,,GRM1885C1H103JA01D,Murata Electronics,
+4,"Unpolarized capacitor, small symbol",C_Small,C32,10p,C_0603,1,,885012006051,Wurth Electronics,
+5,"Unpolarized capacitor, small symbol",C_Small,C1 C2 C5 C6,10u,R_1210,4,,GMK325BJ106MN-T,Taiyo Yuden,
+6,Polarized capacitor,CP,C17,10u,CP_Tantalum_Case-B_EIA-3528-21_Reflow,1,,TCJB106M025R0150,AVX,
+7,"Unpolarized capacitor, small symbol",C_Small,C10,16n,C_1206,1,,GRM3195C1H163JA01D,Murata Electronics,
+8,"Unpolarized capacitor, small symbol",C_Small,C30,1u,C_0805,1,,UMK212B7105KG-T,Taiyo Yuden,
+9,"Unpolarized capacitor, small symbol",C_Small,C26 C27 C28,4.7u,C_0805,3,,885012107013,Wurth Electronics,
+10,"Unpolarized capacitor, small symbol",C_Small,C33,47u,C_1210,1,,EMK325BJ476MM-P,Taiyo Yuden,
+11,"Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_01x01,J9,+5V,Measurement_Point_Round-TH_Small,1 (DNF),,,,DNF
+12,"Connector Europe 64 contacts, ranges A,B,C",C64AC,J1,C64AC,Socket_DIN41612-CaseC1-AC-Male-64Pin-2rows,1 (DNF),,09 03 164 2919,Harting,DNF
+13,"coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)",Conn_Coaxial,J3 J5 J7 J12 J14 J16,Piezo_In,SMA_THT_Jack_Straight,6 (DNF),,,,DNF
+14,One-piece EMI RF shielding cabinet,RF_Shield_One_Piece,J2,RF_Shield_One_Piece,Laird_Technologies_BMI-S-107_44.37x44.37mm,1 (DNF),,36907406S,Wurth Electronics,DNF
+15,"Inductor, small symbol",L_Small,L2 L3,4.7u,Coilcraft_MSS1278T,2,,MSS1278T-472MLD,Coilcraft,
+16,"Inductor, small symbol",L_Small,L1,TDK MPZ2012S221A,L_0805,1,,MPZ2012S221A,TDK,
+17,"Resistor, small symbol",R_Small,R23 R27,0,R_0603,2,,SFR03EZPJ000,ROHM Semiconductor,
+18,"Resistor, small symbol",R_Small,R10,10k,R_0603,1,,RR0816P-103-D,Susumu,
+19,"Resistor, small symbol",R_Small,R1 R2,121k,R_0603,2,,RR0816P-1213-D-09D,Susumu,
+20,"Resistor, small symbol",R_Small,R25 R36,1M,R_0603,2,,ERJ-3RED1004V,Panasonic,
+21,"Resistor, small symbol",R_Small,R4 R6 R9 R12,1k,R_0603,4,,RR0816P-102-D,Susumu,
+22,"Resistor, small symbol",R_Small,R35,243k,R_0603,1,,RR0816P-2433-D-38D,Susumu,
+23,"Resistor, small symbol",R_Small,R3,249,R_0603,1,,RCS0603249RFKEA,Vishay,
+24,"Resistor, small symbol",R_Small,R8 R14,2k,R_0603,2,,RR0816P-202-D,Susumu,
+25,Resistor,R,R16,4.7,R_1210,1,,ERJ-14YJ4R7U,Panasonic,
+26,"Resistor, small symbol",R_Small,R11 R18 R29,49.9,R_1210,3,,RC1210FR-0749R9L,Yageo,
+27,"Resistor, small symbol",R_Small,R34,52.3k,R_0603,1,,RR0816P-5232-D-70C,Susumu,
+28,"Resistor, small symbol",R_Small,R7,DNF,R_0603,1 (DNF),,,,DNF
+29,StemLab RedPitaya 14bit,RedPitaya_125-14,RP1,RedPitaya_125-14,RedPitaya_125-14,1 (DNF),,CES-113-44-T-D,Samtec,DNF
+30,Potentiometer,R_POT,RV1,10k,PINHEAD1-3,1 (DNF),,534B1103JC,Vishay,DNF
+31,"250mA, High-Speed Buffer",BUF634,U5,BUF634,SOIC-8_3.9x4.9mm_Pitch1.27mm,1,,BUF634U/2K5,Texas Instruments,
+32,10V Precision Reference,LT1236-10,U3,LT1236-10,SOIC-8_3.9x4.9mm_Pitch1.27mm,1,,LT1236ACS8-10#PBF,Linear Technologies,
+33,"20V, 500mA, Ultralow Noise, Ultrahigh PSRR Linear Regulator, MSOP Package",LT3045EMSE,U1,LT3045EMSE,MSOP-12-1EP_3x4mm_Pitch0.65mm,1,https://cds.linear.com/docs/en/datasheet/3045f.pdf,LT3045EMSE,Linear Technology,
+34,"–20V, 500mA, Ultralow Noise, Ultrahigh PSRR Negative Linear Regulator",LT3094EMSE,U2,LT3094EMSE,MSOP-12-1EP_3x4mm_Pitch0.65mm,1,https://cds.linear.com/docs/en/datasheet/3045f.pdf,LT3094EMSE,Linear Technology,
+35,,LT8610,U9,LT8610,MSOP-16-1EP_3x4mm_Pitch0.5mm,1,,LT8610EMSE#TRPBF,Linear Technology,
+36,"Dual SoundPlus High Performance, Bipolar-Input Audio Operational Amplifiers, SOIC-8/MSOP-8",OPA1602,U8,OPA1602,SOIC-8_3.9x4.9mm_Pitch1.27mm,1,http://www.ti.com/lit/ds/symlink/opa1604.pdf,OPA1602AIDR,Texas Instruments,
+37,"Quad SoundPlus High Performance, Bipolar-Input Audio Operational Amplifiers, SOIC-14/TSSOP-14",OPA1604,U4,OPA1604,SOIC-14_3.9x8.7mm_Pitch1.27mm,1,http://www.ti.com/lit/ds/symlink/opa1604.pdf,OPA1604AIDR,Texas Instruments,
