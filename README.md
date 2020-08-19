@@ -19,7 +19,7 @@ The controller features:
 
 Related work
 --------------------
-To be published
+Review of Scientific Instruments 91, 083001 (2020); [https://doi.org/10.1063/5.0009524](https://doi.org/10.1063/5.0009524)
 
 
 Requirements
