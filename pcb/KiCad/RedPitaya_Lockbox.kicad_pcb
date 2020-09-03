@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.1.4)-1")
+(kicad_pcb (version 20171130) (host pcbnew "(5.1.2)-1")
 
   (general
     (thickness 1.6)
@@ -11,10 +11,10 @@
 
   (page A4)
   (title_block
-    (title RedPitaya_Lockbox)
+    (title "RedPitaya Lockbox")
     (date 2020-01-06)
     (rev 1.3.1)
-    (company APQ)
+    (company "Atoms-Photons-Quanta, Institut für Angewandte Physik, TU Darmstadt")
     (comment 1 "Tilman Preuschoff")
   )
 

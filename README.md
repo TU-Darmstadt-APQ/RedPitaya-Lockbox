@@ -9,17 +9,19 @@ This repository contains the design of a digital controller for laser frequency 
 The controller features:
 
 - Bandwidth of 1.25 MHz
-- Two independent control loops (eg. laser current and piezo) 
+- Two independent control loops (e.g. laser current and piezo) 
+- Fast output (0\-2 V / power rating 9 dBm) e.g. for laser current
 - Low-noise piezo output
   - Voltage range: ± 10 V / 250 mA 
   - Variable analog piezo offset (± 10 V)
-- Error signal input stage with optional amplification
+- Error signal input stage with optional amplification via hardware adjustment
 - Buffered monitoring outputs for piezo output and error signal input
 - Integrated 5 V / 2.5 A power supply for the RedPitaya board
 
 Related work
 --------------------
 Review of Scientific Instruments 91, 083001 (2020); [https://doi.org/10.1063/5.0009524](https://doi.org/10.1063/5.0009524)
+arXiv:2009.00343 [physics.ins-det]; [https://arxiv.org/abs/2009.00343](https://arxiv.org/abs/2009.00343)
 
 
 Requirements
