@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L device:C_Small C4
+L Device:C_Small C4
 U 1 1 5B054B90
 P 2050 3450
 F 0 "C4" H 2060 3520 50  0000 L CNN
@@ -44,7 +44,7 @@ Connection ~ 2250 1650
 Wire Wire Line
 	2050 1750 2050 2600
 $Comp
-L device:R_Small R1
+L Device:R_Small R1
 U 1 1 5B054C38
 P 2850 2400
 F 0 "R1" H 2880 2420 50  0000 L CNN
@@ -78,7 +78,7 @@ Connection ~ 2850 2200
 Wire Wire Line
 	2850 2100 2850 2200
 $Comp
-L device:C_Small C9
+L Device:C_Small C9
 U 1 1 5B054C4B
 P 2650 2800
 F 0 "C9" H 2660 2870 50  0000 L CNN
@@ -143,7 +143,7 @@ F 5 "LT8610EMSE#TRPBF" H 3350 6800 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C_Small C1
+L Device:C_Small C1
 U 1 1 5B0AE6A5
 P 1500 5450
 F 0 "C1" H 1510 5520 50  0000 L CNN
@@ -156,7 +156,7 @@ F 5 "885012107013" H 1500 5450 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C_Small C6
+L Device:C_Small C6
 U 1 1 5B0AE9B6
 P 2600 6150
 F 0 "C6" H 2610 6220 50  0000 L CNN
@@ -169,7 +169,7 @@ F 5 "GRM1885C1H103JA01D" H 2600 6150 60  0001 C CNN "MFP"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L device:C_Small C7
+L Device:C_Small C7
 U 1 1 5B0AEA0F
 P 2600 6350
 F 0 "C7" H 2610 6420 50  0000 L CNN
@@ -182,7 +182,7 @@ F 5 "UMK212B7105KG-T" H 2600 6350 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:C_Small C16
+L Device:C_Small C16
 U 1 1 5B0AEFF1
 P 4400 6500
 F 0 "C16" H 4410 6570 50  0000 L CNN
@@ -195,7 +195,7 @@ F 5 "885012006051" H 4400 6500 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:R_Small R5
+L Device:R_Small R5
 U 1 1 5B0AF358
 P 3150 6800
 F 0 "R5" H 3180 6820 50  0000 L CNN
@@ -208,7 +208,7 @@ F 5 "RR0816P-5232-D-70C" H 3150 6800 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R_Small R13
+L Device:R_Small R13
 U 1 1 5B0AF3B3
 P 4050 6800
 F 0 "R13" H 4080 6820 50  0000 L CNN
@@ -221,7 +221,7 @@ F 5 "RR0816P-2433-D-38D" H 4050 6800 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R_Small R15
+L Device:R_Small R15
 U 1 1 5B0AF408
 P 4400 6150
 F 0 "R15" H 4430 6170 50  0000 L CNN
@@ -234,7 +234,7 @@ F 5 "ERJ-3RED1004V" H 4400 6150 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:L_Small L3
+L Device:L_Small L3
 U 1 1 5B0AF459
 P 4250 5750
 F 0 "L3" H 4280 5790 50  0000 L CNN
@@ -247,7 +247,7 @@ F 5 "MSS1278T-472MLD" H 4250 5750 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:L_Small L2
+L Device:L_Small L2
 U 1 1 5B0AFFC6
 P 2150 5300
 F 0 "L2" H 2180 5340 50  0000 L CNN
@@ -260,7 +260,7 @@ F 5 "MSS1278T-472MLD" H 2150 5300 60  0001 C CNN "MFP"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L device:L_Small L1
+L Device:L_Small L1
 U 1 1 5B0B0023
 P 1750 5300
 F 0 "L1" H 1780 5340 50  0000 L CNN
@@ -399,7 +399,7 @@ Wire Wire Line
 	4600 6500 4500 6500
 Connection ~ 4600 6150
 $Comp
-L device:C_Small C20
+L Device:C_Small C20
 U 1 1 5B0B772C
 P 4800 5950
 F 0 "C20" H 4810 6020 50  0000 L CNN
@@ -412,7 +412,7 @@ F 5 "EMK325BJ476MM-P" H 4800 5950 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:RF_Shield_One_Piece J9
+L Device:RF_Shield_One_Piece J9
 U 1 1 5B0D8BF4
 P 5950 6050
 F 0 "J9" H 5950 6250 50  0000 C CNN
@@ -426,7 +426,7 @@ F 6 "DNF" H 5950 6050 60  0001 C CNN "Config"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C_Small C8
+L Device:C_Small C8
 U 1 1 5C1A9735
 P 2650 2400
 F 0 "C8" H 2660 2470 50  0000 L CNN
@@ -439,7 +439,7 @@ F 5 "C1206C104K3GEC7210" H 2650 2400 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C_Small C21
+L Device:C_Small C21
 U 1 1 5C1A9DA5
 P 7150 1600
 F 0 "C21" H 7160 1670 50  0000 L CNN
@@ -452,7 +452,7 @@ F 5 "C1206C104K3GEC7210" H 7150 1600 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C_Small C3
+L Device:C_Small C3
 U 1 1 5C1BB058
 P 2050 1650
 F 0 "C3" H 2060 1720 50  0000 L CNN
@@ -465,7 +465,7 @@ F 5 "GMK325BJ106MN-T" H 2050 1650 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C_Small C12
+L Device:C_Small C12
 U 1 1 5C1BB114
 P 4150 1700
 F 0 "C12" H 4160 1770 50  0000 L CNN
@@ -478,7 +478,7 @@ F 5 "GMK325BJ106MN-T" H 4150 1700 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C_Small C13
+L Device:C_Small C13
 U 1 1 5C1BB1D1
 P 4150 3450
 F 0 "C13" H 4160 3520 50  0000 L CNN
@@ -491,7 +491,7 @@ F 5 "GMK325BJ106MN-T" H 4150 3450 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C_Small C2
+L Device:C_Small C2
 U 1 1 5C1BD28C
 P 1950 5450
 F 0 "C2" H 1960 5520 50  0000 L CNN
@@ -504,7 +504,7 @@ F 5 "885012107013" H 1950 5450 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C_Small C5
+L Device:C_Small C5
 U 1 1 5C1BD316
 P 2350 5450
 F 0 "C5" H 2360 5520 50  0000 L CNN
@@ -517,7 +517,7 @@ F 5 "885012107013" H 2350 5450 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C_Small C11
+L Device:C_Small C11
 U 1 1 5C2275B7
 P 4050 5550
 F 0 "C11" H 4060 5620 50  0000 L CNN
@@ -601,7 +601,7 @@ Connection ~ 7150 1400
 Wire Wire Line
 	8300 1400 8550 1400
 $Comp
-L device:R_Small R2
+L Device:R_Small R2
 U 1 1 5CCF58A1
 P 2850 2800
 F 0 "R2" H 2880 2820 50  0000 L CNN
@@ -748,7 +748,7 @@ Wire Wire Line
 Wire Wire Line
 	7150 1400 7300 1400
 $Comp
-L device:R_POT RV1
+L Device:R_POT RV1
 U 1 1 5D6DA79F
 P 9150 1700
 F 0 "RV1" H 9080 1746 50  0000 R CNN
