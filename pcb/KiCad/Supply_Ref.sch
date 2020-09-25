@@ -530,22 +530,22 @@ F 5 "CC0603ZPY5V9BB104" H 4050 5550 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J8
+L Connector:TestPoint TP4
 U 1 1 5C2285AF
-P 4800 5550
-F 0 "J8" H 4800 5650 50  0000 C CNN
-F 1 "+5V" V 4900 5550 50  0000 C CNN
-F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4800 5550 50  0001 C CNN
-F 3 "" H 4800 5550 50  0001 C CNN
-F 4 "DNF" H 4800 5550 60  0001 C CNN "Config"
-	1    4800 5550
-	0    -1   -1   0   
+P 4800 5650
+F 0 "TP4" H 4700 5750 50  0000 C CNN
+F 1 "+5V" V 4900 5750 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4800 5650 50  0001 C CNN
+F 3 "" H 4800 5650 50  0001 C CNN
+F 4 "DNF" H 4800 5650 60  0001 C CNN "Config"
+	1    4800 5650
+	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint J4
+L Connector:TestPoint TP2
 U 1 1 5C22864C
 P 4150 3750
-F 0 "J4" H 4150 3950 50  0000 C CNN
+F 0 "TP2" H 4150 3950 50  0000 C CNN
 F 1 "-12V" V 4250 3750 50  0000 C CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4150 3750 50  0001 C CNN
 F 3 "" H 4150 3750 50  0001 C CNN
@@ -554,10 +554,10 @@ F 4 "DNF" H 4150 3750 60  0001 C CNN "Config"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:TestPoint J2
+L Connector:TestPoint TP1
 U 1 1 5C228744
 P 4150 1450
-F 0 "J2" H 4150 1650 50  0000 C CNN
+F 0 "TP1" H 4150 1650 50  0000 C CNN
 F 1 "+12V" V 4250 1450 50  0000 C CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4150 1450 50  0001 C CNN
 F 3 "" H 4150 1450 50  0001 C CNN
@@ -566,10 +566,10 @@ F 4 "DNF" H 4150 1450 60  0001 C CNN "Config"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint J6
+L Connector:TestPoint TP3
 U 1 1 5C229A96
 P 4800 2600
-F 0 "J6" H 4800 2700 50  0000 C CNN
+F 0 "TP3" H 4800 2700 50  0000 C CNN
 F 1 "GND" V 4900 2600 50  0000 C CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4800 2600 50  0001 C CNN
 F 3 "" H 4800 2600 50  0001 C CNN
@@ -617,10 +617,10 @@ Wire Wire Line
 	8550 1400 8550 1500
 Connection ~ 8550 1400
 $Comp
-L Connector:TestPoint J10
+L Connector:TestPoint TP5
 U 1 1 5CCF668F
 P 8550 1500
-F 0 "J10" H 8550 1750 50  0000 C CNN
+F 0 "TP5" H 8550 1750 50  0000 C CNN
 F 1 "+10V" V 8650 1500 50  0000 C CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 8550 1500 50  0001 C CNN
 F 3 "" H 8550 1500 50  0001 C CNN
@@ -849,4 +849,6 @@ Wire Wire Line
 Wire Wire Line
 	4150 3600 4150 3750
 Connection ~ 4800 2600
+Wire Wire Line
+	4800 5650 4800 5750
 $EndSCHEMATC
