@@ -25,7 +25,7 @@ F 3 "" H 4850 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C_Small C14
+L Device:C_Small C14
 U 1 1 5B057937
 P 3300 3550
 F 0 "C14" H 3310 3620 50  0000 L CNN
@@ -118,7 +118,7 @@ F 3 "" H 5700 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R R16
+L Device:R R16
 U 1 1 5B057987
 P 6250 4050
 F 0 "R16" V 6330 4050 50  0000 C CNN
@@ -167,7 +167,7 @@ F 5 "Texas Instruments" H 6500 3300 60  0001 C CNN "MFN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R_Small R18
+L Device:R_Small R18
 U 1 1 5B0579A2
 P 7000 3300
 F 0 "R18" H 7030 3320 50  0000 L CNN
@@ -218,7 +218,7 @@ F 5 "OPA1604AIDR" H 3200 3950 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C_Small C15
+L Device:C_Small C15
 U 1 1 5B057A08
 P 3300 4350
 F 0 "C15" H 3310 4420 50  0000 L CNN
@@ -235,7 +235,7 @@ Text GLabel 3100 4450 3    60   Input ~ 0
 Text GLabel 1900 6250 0    60   Input ~ 0
 SET
 $Comp
-L device:R_Small R9
+L Device:R_Small R9
 U 1 1 5B057A11
 P 3900 3950
 F 0 "R9" H 3930 3970 50  0000 L CNN
@@ -248,7 +248,7 @@ F 5 "RR0816P-102-D" H 3900 3950 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:R_Small R14
+L Device:R_Small R14
 U 1 1 5B057A18
 P 4900 4950
 F 0 "R14" H 4930 4970 50  0000 L CNN
@@ -265,7 +265,7 @@ Text GLabel 5300 4600 3    60   Input ~ 0
 Text GLabel 5300 3550 1    60   Input ~ 0
 +12V
 $Comp
-L device:R_Small R12
+L Device:R_Small R12
 U 1 1 5B057A35
 P 4500 5100
 F 0 "R12" H 4530 5120 50  0000 L CNN
@@ -302,7 +302,7 @@ F 4 "DNF" H 7700 4600 60  0001 C CNN "Config"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L device:R_Small R23
+L Device:R_Small R23
 U 1 1 5B0591B4
 P 8100 4600
 F 0 "R23" H 8130 4620 50  0000 L CNN
@@ -315,7 +315,7 @@ F 5 "SFR03EZPJ000" H 8100 4600 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:R_Small R25
+L Device:R_Small R25
 U 1 1 5B0591C0
 P 8250 4850
 F 0 "R25" H 8280 4870 50  0000 L CNN
@@ -328,7 +328,7 @@ F 5 "ERJ-3RED1004V" H 8250 4850 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R_Small R27
+L Device:R_Small R27
 U 1 1 5B0591C6
 P 8650 3350
 F 0 "R27" H 8680 3370 50  0000 L CNN
@@ -397,7 +397,7 @@ F 4 "DNF" H 10450 3250 60  0001 C CNN "Config"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R_Small R29
+L Device:R_Small R29
 U 1 1 5B059205
 P 10050 3250
 F 0 "R29" H 10080 3270 50  0000 L CNN
@@ -460,7 +460,7 @@ Text GLabel 9450 2750 1    60   Input ~ 0
 Text Notes 7700 5450 0    60   ~ 0
 Use as non-inv. amp (R7,R27)\nor divider (R23,R25)\nfor level adjustment.
 $Comp
-L device:R_Small R7
+L Device:R_Small R7
 U 1 1 5B3FA4A8
 P 7950 3700
 F 0 "R7" H 7980 3720 50  0000 L CNN
@@ -494,7 +494,7 @@ F 3 "" H 9550 3250 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L device:C_Small C10
+L Device:C_Small C10
 U 1 1 5B6D8FE5
 P 2450 4250
 F 0 "C10" H 2460 4320 50  0000 L CNN
@@ -518,7 +518,7 @@ F 3 "" H 2500 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R_Small R11
+L Device:R_Small R11
 U 1 1 5C1A6223
 P 9200 4300
 F 0 "R11" H 9230 4320 50  0000 L CNN
@@ -531,7 +531,7 @@ F 5 "RC1210FR-0749R9L" H 9200 4300 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:C_Small C19
+L Device:C_Small C19
 U 1 1 5C1ADE01
 P 5500 4500
 F 0 "C19" H 5510 4570 50  0000 L CNN
@@ -544,7 +544,7 @@ F 5 "CC0603ZPY5V9BB104" H 5500 4500 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:C_Small C18
+L Device:C_Small C18
 U 1 1 5C1AE145
 P 5500 3650
 F 0 "C18" H 5510 3720 50  0000 L CNN
@@ -557,7 +557,7 @@ F 5 "CC0603ZPY5V9BB104" H 5500 3650 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:C_Small C22
+L Device:C_Small C22
 U 1 1 5C1AE57D
 P 9600 2850
 F 0 "C22" H 9350 2850 50  0000 L CNN
@@ -570,7 +570,7 @@ F 5 "CC0603ZPY5V9BB104" H 9600 2850 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:C_Small C23
+L Device:C_Small C23
 U 1 1 5C1AECC1
 P 9600 3650
 F 0 "C23" H 9450 3600 50  0000 L CNN
@@ -583,7 +583,7 @@ F 5 "CC0603ZPY5V9BB104" H 9600 3650 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:R_Small R10
+L Device:R_Small R10
 U 1 1 5CCF959D
 P 2250 6250
 F 0 "R10" H 2280 6270 50  0000 L CNN
@@ -596,7 +596,7 @@ F 5 "RR0816P-103-D" H 2250 6250 60  0001 C CNN "MFP"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L device:CP C17
+L Device:CP C17
 U 1 1 5CCF9C5E
 P 2500 6550
 F 0 "C17" H 2525 6650 50  0000 L CNN
@@ -609,7 +609,7 @@ F 5 "TCJB106M025R0150" H 2500 6550 60  0001 C CNN "MFP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R_Small R6
+L Device:R_Small R6
 U 1 1 5CCFABD0
 P 2150 3850
 F 0 "R6" H 2180 3870 50  0000 L CNN
@@ -622,7 +622,7 @@ F 5 "RR0816P-102-D" H 2150 3850 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:R_Small R4
+L Device:R_Small R4
 U 1 1 5CCFCD96
 P 3300 4900
 F 0 "R4" H 3330 4920 50  0000 L CNN
@@ -635,7 +635,7 @@ F 5 "RR0816P-102-D" H 3300 4900 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:R_Small R3
+L Device:R_Small R3
 U 1 1 5CCFCE48
 P 2800 5100
 F 0 "R3" H 2830 5120 50  0000 L CNN
@@ -885,7 +885,7 @@ $EndComp
 Wire Wire Line
 	5700 4500 5700 4600
 $Comp
-L device:R_Small R8
+L Device:R_Small R8
 U 1 1 5E14075D
 P 4200 4250
 F 0 "R8" H 4230 4270 50  0000 L CNN
@@ -949,7 +949,7 @@ F 4 "DNF" H 1650 2500 60  0001 C CNN "Config"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L device:R_Small R20
+L Device:R_Small R20
 U 1 1 5F57DB95
 P 2600 1250
 F 0 "R20" H 2630 1270 50  0000 L CNN
@@ -1007,7 +1007,7 @@ F 4 "DNF" H 5500 2100 60  0001 C CNN "Config"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R_Small R26
+L Device:R_Small R26
 U 1 1 5F57DBCA
 P 5100 2100
 F 0 "R26" H 5130 2120 50  0000 L CNN
@@ -1068,7 +1068,7 @@ $EndComp
 Text GLabel 4500 1600 1    60   Input ~ 0
 -12V
 $Comp
-L device:R_Small R17
+L Device:R_Small R17
 U 1 1 5F57DC00
 P 1900 1600
 F 0 "R17" H 1930 1620 50  0000 L CNN
@@ -1102,7 +1102,7 @@ F 3 "" H 4600 2100 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L device:C_Small C26
+L Device:C_Small C26
 U 1 1 5F57DC2C
 P 4650 1700
 F 0 "C26" H 4400 1700 50  0000 L CNN
@@ -1115,7 +1115,7 @@ F 5 "CC0603ZPY5V9BB104" H 4650 1700 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:C_Small C27
+L Device:C_Small C27
 U 1 1 5F57DC38
 P 4650 2500
 F 0 "C27" H 4500 2450 50  0000 L CNN
@@ -1194,7 +1194,7 @@ Wire Wire Line
 Text GLabel 4500 2500 3    60   Input ~ 0
 +12V
 $Comp
-L device:R_Small R22
+L Device:R_Small R22
 U 1 1 5F5D47A2
 P 3800 1400
 F 0 "R22" H 3830 1420 50  0000 L CNN
@@ -1223,7 +1223,7 @@ Wire Wire Line
 Wire Wire Line
 	3800 1050 4100 1050
 $Comp
-L device:R_Small R24
+L Device:R_Small R24
 U 1 1 5F5E0D9A
 P 4500 1050
 F 0 "R24" H 4530 1070 50  0000 L CNN
@@ -1245,7 +1245,7 @@ Wire Wire Line
 Wire Wire Line
 	4950 1050 4950 2100
 $Comp
-L device:R_Small R19
+L Device:R_Small R19
 U 1 1 5F5EFC6B
 P 2050 2500
 F 0 "R19" H 2080 2520 50  0000 L CNN
@@ -1258,7 +1258,7 @@ F 5 "RR0816P-102-D" H 2050 2500 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:R_Small R21
+L Device:R_Small R21
 U 1 1 5F5F0529
 P 3300 2200
 F 0 "R21" H 3330 2220 50  0000 L CNN
@@ -1271,7 +1271,7 @@ F 5 "RR0816P-102-D" H 3300 2200 60  0001 C CNN "MFP"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:C_Small C24
+L Device:C_Small C24
 U 1 1 5F617ABC
 P 2200 2750
 F 0 "C24" H 2292 2796 50  0000 L CNN
@@ -1295,7 +1295,7 @@ Connection ~ 3750 2200
 Wire Wire Line
 	3750 2200 4300 2200
 $Comp
-L device:C_Small C25
+L Device:C_Small C25
 U 1 1 5F63A1AA
 P 3750 2600
 F 0 "C25" H 3842 2646 50  0000 L CNN
