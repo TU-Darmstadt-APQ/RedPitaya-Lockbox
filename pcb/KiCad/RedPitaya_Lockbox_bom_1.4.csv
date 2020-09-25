@@ -38,3 +38,19 @@ Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet
 37,,LT8610,U6,LT8610,MSOP-16-1EP_3x4.039mm_P0.5mm_EP1.651x2.845mm,1,,LT8610EMSE#TRPBF,Linear Technology,
 38,"Dual SoundPlus High Performance, Bipolar-Input Audio Operational Amplifiers, SOIC-8/MSOP-8",OPA1602,U7 U8,OPA1602,SOIC-8_3.9x4.9mm_P1.27mm,2,http://www.ti.com/lit/ds/symlink/opa1604.pdf,OPA1602AIDR,Texas Instruments,
 39,"Quad SoundPlus High Performance, Bipolar-Input Audio Operational Amplifiers, SOIC-14/TSSOP-14",OPA1604,U4,OPA1604,SOIC-14_3.9x8.7mm_P1.27mm,1,http://www.ti.com/lit/ds/symlink/opa1604.pdf,OPA1604AIDR,Texas Instruments,
+
+
+
+
+
+Component Groups:,39
+Component Count:,80
+Fitted Components:,65
+Number of PCBs:,1
+Total components:,65
+Schematic Version:,1.4
+Schematic Date:,2020-09-07
+PCB Variant:,"""default"""
+BoM Date:,25.09.2020 16:13:28
+Schematic Source:,C:\Users\Tilman Preuschoff\Documents\GitHub\RedPitaya-Lockbox\pcb\KiCad\RedPitaya_Lockbox.sch
+KiCad Version:,Eeschema (5.1.5)-3

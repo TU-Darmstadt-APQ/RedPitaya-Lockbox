@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.1.6)
+(kicad_pcb (version 20171130) (host pcbnew "(5.1.5)-3")
 
   (general
     (thickness 1.6)
@@ -42,7 +42,7 @@
   )
 
   (setup
-    (last_trace_width 0.2)
+    (last_trace_width 0.25)
     (user_trace_width 0.2)
     (user_trace_width 0.5)
     (user_trace_width 1)
@@ -3230,7 +3230,7 @@
       (net 2 GND))
     (pad 1 thru_hole circle (at 0 0) (size 2.05 2.05) (drill 1.5) (layers *.Cu *.Mask)
       (net 7 "Net-(J3-Pad1)"))
-    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132134_Vertical.wrl
+    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3274,7 +3274,7 @@
       (net 2 GND))
     (pad 1 thru_hole circle (at 0 0) (size 2.05 2.05) (drill 1.5) (layers *.Cu *.Mask)
       (net 8 "Net-(J5-Pad1)"))
-    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132134_Vertical.wrl
+    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3318,7 +3318,7 @@
       (net 2 GND))
     (pad 1 thru_hole circle (at 0 0) (size 2.05 2.05) (drill 1.5) (layers *.Cu *.Mask)
       (net 113 "Net-(J11-Pad1)"))
-    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132134_Vertical.wrl
+    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3362,7 +3362,7 @@
       (net 2 GND))
     (pad 1 thru_hole circle (at 0 0) (size 2.05 2.05) (drill 1.5) (layers *.Cu *.Mask)
       (net 114 "Net-(J13-Pad1)"))
-    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132134_Vertical.wrl
+    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3406,7 +3406,7 @@
       (net 2 GND))
     (pad 1 thru_hole circle (at 0 0) (size 2.05 2.05) (drill 1.5) (layers *.Cu *.Mask)
       (net 17 "Net-(J16-Pad1)"))
-    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132134_Vertical.wrl
+    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3450,7 +3450,7 @@
       (net 2 GND))
     (pad 1 thru_hole circle (at 0 0) (size 2.05 2.05) (drill 1.5) (layers *.Cu *.Mask)
       (net 9 "Net-(J12-Pad1)"))
-    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132134_Vertical.wrl
+    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3494,7 +3494,7 @@
       (net 2 GND))
     (pad 1 thru_hole circle (at 0 0) (size 2.05 2.05) (drill 1.5) (layers *.Cu *.Mask)
       (net 10 "Net-(J14-Pad1)"))
-    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132134_Vertical.wrl
+    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3538,7 +3538,7 @@
       (net 2 GND))
     (pad 1 thru_hole circle (at 0 0) (size 2.05 2.05) (drill 1.5) (layers *.Cu *.Mask)
       (net 14 "Net-(J7-Pad1)"))
-    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132134_Vertical.wrl
+    (model ${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4032,10 +4032,10 @@
       (net 3 -15V))
     (pad "" np_thru_hole circle (at -44.45 5.08 270) (size 2.9 2.9) (drill 2.9) (layers *.Cu *.Mask))
     (pad "" np_thru_hole circle (at 44.45 5.08 270) (size 2.9 2.9) (drill 2.9) (layers *.Cu *.Mask))
-    (model ${KIPRJMOD}/3D_models/0903164X921_100882722MOD000A.STP
-      (offset (xyz -43.7 -4.6 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 90 180))
+    (model ${KIPRJMOD}/3D_models/DIN384617.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 0.3937 0.3937 0.3937))
+      (rotate (xyz 0 0 0))
     )
   )
 
@@ -5235,12 +5235,6 @@
   (segment (start 198.1 51.8) (end 197.3 51.8) (width 0.25) (layer F.Cu) (net 112))
   (segment (start 198.4 51.5) (end 198.1 51.8) (width 0.25) (layer F.Cu) (net 112))
   (segment (start 198.4 50.65) (end 198.4 51.5) (width 0.25) (layer F.Cu) (net 112))
-  (segment (start 91.435 66.6) (end 91.435 65.325) (width 0.5) (layer F.Cu) (net 122))
-  (segment (start 91.435 65.325) (end 92.64 64.12) (width 0.5) (layer F.Cu) (net 122))
-  (segment (start 99.9 64.12) (end 99.9 67) (width 0.5) (layer F.Cu) (net 122))
-  (segment (start 99.9 64.12) (end 98.42 64.12) (width 0.5) (layer F.Cu) (net 122))
-  (segment (start 92.64 64.12) (end 98.42 64.12) (width 0.5) (layer F.Cu) (net 122))
-  (segment (start 98.42 64.12) (end 98.96 64.12) (width 0.5) (layer F.Cu) (net 122))
   (segment (start 188.5 65) (end 181.8 65) (width 0.5) (layer F.Cu) (net 113))
   (segment (start 181 64.2) (end 181 63.25) (width 0.5) (layer F.Cu) (net 113))
   (segment (start 181.8 65) (end 181 64.2) (width 0.5) (layer F.Cu) (net 113))
@@ -5271,8 +5265,14 @@
   (segment (start 200.5 57.2875) (end 200.5 58.25) (width 0.55) (layer F.Cu) (net 119))
   (segment (start 200.75 58.5) (end 200.5 58.25) (width 0.55) (layer F.Cu) (net 119))
   (segment (start 206.1 58.5) (end 200.75 58.5) (width 0.55) (layer F.Cu) (net 119))
+  (segment (start 91.435 66.6) (end 91.435 65.325) (width 0.5) (layer F.Cu) (net 122))
+  (segment (start 91.435 65.325) (end 92.64 64.12) (width 0.5) (layer F.Cu) (net 122))
+  (segment (start 99.9 64.12) (end 99.9 67) (width 0.5) (layer F.Cu) (net 122))
+  (segment (start 99.9 64.12) (end 98.42 64.12) (width 0.5) (layer F.Cu) (net 122))
+  (segment (start 92.64 64.12) (end 98.42 64.12) (width 0.5) (layer F.Cu) (net 122))
+  (segment (start 98.42 64.12) (end 98.96 64.12) (width 0.5) (layer F.Cu) (net 122))
 
-  (zone (net 1) (net_name +15V) (layer F.Cu) (tstamp 5F577EA5) (hatch edge 0.508)
+  (zone (net 1) (net_name +15V) (layer F.Cu) (tstamp 5F6DFA72) (hatch edge 0.508)
     (connect_pads (clearance 0.25))
     (min_thickness 0.2)
     (fill yes (arc_segments 16) (thermal_gap 0.4) (thermal_bridge_width 0.5))
@@ -5382,7 +5382,7 @@
       )
     )
   )
-  (zone (net 5) (net_name -12V) (layer F.Cu) (tstamp 5F577EA2) (hatch edge 0.508)
+  (zone (net 5) (net_name -12V) (layer F.Cu) (tstamp 5F6DFA6F) (hatch edge 0.508)
     (connect_pads (clearance 0.25))
     (min_thickness 0.2)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -5481,7 +5481,7 @@
       )
     )
   )
-  (zone (net 3) (net_name -15V) (layer F.Cu) (tstamp 5F577E9F) (hatch edge 0.508)
+  (zone (net 3) (net_name -15V) (layer F.Cu) (tstamp 5F6DFA6C) (hatch edge 0.508)
     (connect_pads (clearance 0.25))
     (min_thickness 0.2)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -5585,7 +5585,7 @@
       )
     )
   )
-  (zone (net 108) (net_name "Net-(C11-Pad2)") (layer F.Cu) (tstamp 5F577E9C) (hatch edge 0.508)
+  (zone (net 108) (net_name "Net-(C11-Pad2)") (layer F.Cu) (tstamp 5F6DFA69) (hatch edge 0.508)
     (connect_pads (clearance 0.25))
     (min_thickness 0.2)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -5634,7 +5634,7 @@
       )
     )
   )
-  (zone (net 2) (net_name GND) (layer F.Cu) (tstamp 5F577E99) (hatch edge 0.508)
+  (zone (net 2) (net_name GND) (layer F.Cu) (tstamp 5F6DFA66) (hatch edge 0.508)
     (connect_pads (clearance 0.25))
     (min_thickness 0.2)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -5661,7 +5661,7 @@
       )
     )
   )
-  (zone (net 20) (net_name +5V) (layer F.Cu) (tstamp 5F577E96) (hatch edge 0.508)
+  (zone (net 20) (net_name +5V) (layer F.Cu) (tstamp 5F6DFA63) (hatch edge 0.508)
     (priority 1)
     (connect_pads (clearance 0.25))
     (min_thickness 0.2)
@@ -5699,7 +5699,7 @@
       )
     )
   )
-  (zone (net 1) (net_name +15V) (layer F.Cu) (tstamp 5F577E93) (hatch edge 0.508)
+  (zone (net 1) (net_name +15V) (layer F.Cu) (tstamp 5F6DFA60) (hatch edge 0.508)
     (connect_pads (clearance 0.25))
     (min_thickness 0.2)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -5764,7 +5764,7 @@
       )
     )
   )
-  (zone (net 2) (net_name GND) (layer F.Cu) (tstamp 5F577E90) (hatch edge 0.508)
+  (zone (net 2) (net_name GND) (layer F.Cu) (tstamp 5F6DFA5D) (hatch edge 0.508)
     (priority 2)
     (connect_pads (clearance 0.25))
     (min_thickness 0.2)
@@ -6036,7 +6036,7 @@
       )
     )
   )
-  (zone (net 2) (net_name GND) (layer B.Cu) (tstamp 5F577E8D) (hatch edge 0.508)
+  (zone (net 2) (net_name GND) (layer B.Cu) (tstamp 5F6DFA5A) (hatch edge 0.508)
     (connect_pads (clearance 0.25))
     (min_thickness 0.2)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -7217,7 +7217,7 @@
       )
     )
   )
-  (zone (net 4) (net_name +12V) (layer F.Cu) (tstamp 5F577E8A) (hatch edge 0.508)
+  (zone (net 4) (net_name +12V) (layer F.Cu) (tstamp 5F6DFA57) (hatch edge 0.508)
     (priority 1)
     (connect_pads (clearance 0.25))
     (min_thickness 0.254)
@@ -7308,7 +7308,7 @@
       )
     )
   )
-  (zone (net 3) (net_name -15V) (layer B.Cu) (tstamp 0) (hatch edge 0.508)
+  (zone (net 3) (net_name -15V) (layer B.Cu) (tstamp 5F6DFA54) (hatch edge 0.508)
     (priority 1)
     (connect_pads (clearance 0.25))
     (min_thickness 0.254)
