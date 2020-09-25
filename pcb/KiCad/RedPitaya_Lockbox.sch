@@ -293,4 +293,48 @@ F 3 "~" H 1550 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 1550 4050
+$Comp
+L Custom_logos:Logo_APQ LOGO1
+U 1 1 5F6D3841
+P 9600 6750
+F 0 "LOGO1" H 9850 7025 50  0001 C CNN
+F 1 "Logo_APQ" H 9850 6500 50  0001 C CNN
+F 2 "custom:APQ-Logo" H 9900 6750 50  0001 C CNN
+F 3 "~" H 9900 6750 50  0001 C CNN
+	1    9600 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small LOGO2
+U 1 1 5F6D62F6
+P 10900 6850
+F 0 "LOGO2" H 10900 7125 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 10900 6625 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo_5.7x6mm_SilkScreen" H 10900 6850 50  0001 C CNN
+F 3 "~" H 10900 6850 50  0001 C CNN
+	1    10900 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5F6D8B6D
+P 10450 5250
+F 0 "H1" H 10550 5300 50  0000 L CNN
+F 1 "MountingHole" H 10550 5200 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 10450 5250 50  0001 C CNN
+F 3 "~" H 10450 5250 50  0001 C CNN
+	1    10450 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5F6D8E2D
+P 10450 5450
+F 0 "H2" H 10550 5500 50  0000 L CNN
+F 1 "MountingHole" H 10550 5400 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 10450 5450 50  0001 C CNN
+F 3 "~" H 10450 5450 50  0001 C CNN
+	1    10450 5450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
