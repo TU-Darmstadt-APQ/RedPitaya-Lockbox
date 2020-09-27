@@ -22,12 +22,12 @@ Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet
 21,"Resistor, small symbol",R_Small,R4 R6 R9 R12 R21,1k,R_0603_1608Metric,5,,Susumu,RR0816P-102-D,
 22,"Resistor, small symbol",R_Small,R13,243k,R_0603_1608Metric,1,,Susumu,RR0816P-2433-D-38D,
 23,"Resistor, small symbol",R_Small,R3,249,R_0603_1608Metric,1,,Vishay,RCS0603249RFKEA,
-24,"Resistor, small symbol",R_Small,R8 R14 R19,2k,R_0603_1608Metric,3,,Susumu,RR0816P-202-D RR0816P-102-D,
+24,"Resistor, small symbol",R_Small,R8 R14 R19,2k,R_0603_1608Metric,3,,Susumu,RR0816P-202-D,
 25,Resistor,R,R16,4.7,R_1210_3225Metric,1,,Panasonic,ERJ-14YJ4R7U,
 26,"Resistor, small symbol",R_Small,R11 R18 R26 R29,49.9,R_1210_3225Metric,4,,Yageo,RC1210FR-0749R9L,
 27,"Resistor, small symbol",R_Small,R5,52.3k,R_0603_1608Metric,1,,Susumu,RR0816P-5232-D-70C,
 28,"Resistor, small symbol",R_Small,R7 R17 R22,DNF,R_0603_1608Metric,3 (DNF),,,,DNF
-29,StemLab RedPitaya 14bit,RedPitaya_125-14,RP1,RedPitaya_125-14,RedPitaya_125-14,1 (DNF),,Samtec,CES-113-44-T-D,DNF
+29,StemLab RedPitaya 14bit,RedPitaya_125-14,RP1,RedPitaya_125-14,RedPitaya_125-14,1 (DNF),,Samtec,ESQ-113-44-T-D,DNF
 30,Potentiometer,R_POT,RV1,10k,Pin_Header_Straight_1x03_Pitch2.54mm_Friction_Lock,1 (DNF),,Vishay,534B1103JC,DNF
 31,"250mA, High-Speed Buffer",BUF634,U5,BUF634,SOIC-8_3.9x4.9mm_P1.27mm,1,,Texas Instruments,BUF634U/2K5,
 32,10V Precision Reference,LT1236-10,U3,LT1236-10,SOIC-8_3.9x4.9mm_P1.27mm,1,,Linear Technologies,LT1236ACS8-10#PBF,
@@ -49,6 +49,6 @@ Total components:,71
 Schematic Version:,1.4
 Schematic Date:,2020-09-07
 PCB Variant:,"""default"""
-BoM Date:,2020-09-27T13:04:27 CEST
+BoM Date:,2020-09-27T13:39:02 CEST
 Schematic Source:,/home/maat/Documents/Uni/Physik/Phd/tmp/RedPitaya-Lockbox/pcb/KiCad/RedPitaya_Lockbox.sch
 KiCad Version:,Eeschema 5.1.6
