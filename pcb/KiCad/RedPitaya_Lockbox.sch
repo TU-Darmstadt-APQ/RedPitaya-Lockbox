@@ -337,4 +337,15 @@ F 3 "~" H 10450 5450 50  0001 C CNN
 	1    10450 5450
 	1    0    0    -1  
 $EndComp
+$Comp
+L Custom_logos:Logo_ROHS LOGO?
+U 1 1 5F70D043
+P 8800 6750
+F 0 "LOGO?" H 9050 7025 50  0001 C CNN
+F 1 "Logo_ROHS" H 9050 6500 50  0001 C CNN
+F 2 "Symbol:RoHS-Logo_6mm_SilkScreen" H 9100 6750 50  0001 C CNN
+F 3 "~" H 9100 6750 50  0001 C CNN
+	1    8800 6750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

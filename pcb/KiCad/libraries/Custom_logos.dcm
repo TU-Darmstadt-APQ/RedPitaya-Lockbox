@@ -6,4 +6,10 @@ K Logo
 F ~
 $ENDCMP
 #
+$CMP Logo_ROHS
+D Open Hardware logo, small
+K Logo
+F ~
+$ENDCMP
+#
 #End Doc Library
