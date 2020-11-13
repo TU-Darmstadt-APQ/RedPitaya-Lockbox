@@ -1,12 +1,13 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:RedPitaya_Lockbox-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
 Title "RedPitaya Lockbox: Piezo Controller"
-Date "2020-09-07"
-Rev "1.4"
+Date "2020-11-13"
+Rev "1.4.1"
 Comp "Atoms-Photons-Quanta, Institut für Angewandte Physik, TU Darmstadt"
 Comment1 "Tilman Preuschoff"
 Comment2 ""
@@ -64,26 +65,26 @@ $EndComp
 $Comp
 L Connector:Conn_Coaxial J3
 U 1 1 5B057966
-P 1700 3850
-F 0 "J3" H 1700 4000 50  0000 C CNN
-F 1 "Piezo_In (Out1)" V 1800 3850 50  0000 C CNN
-F 2 "Connector_Coaxial:SMA_Amphenol_132134_Vertical" H 1700 3850 50  0001 C CNN
-F 3 "" H 1700 3850 50  0001 C CNN
-F 4 "" H 1700 3850 60  0001 C CNN "Config"
-F 5 "Amphenol" H 1700 3850 50  0001 C CNN "MFN"
-F 6 "901-144-8RFX" H 1700 3850 50  0001 C CNN "PN"
-	1    1700 3850
+P 1050 3850
+F 0 "J3" H 1050 4000 50  0000 C CNN
+F 1 "Piezo_In (Out1)" V 1150 3850 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134_Vertical" H 1050 3850 50  0001 C CNN
+F 3 "" H 1050 3850 50  0001 C CNN
+F 4 "" H 1050 3850 60  0001 C CNN "Config"
+F 5 "Amphenol" H 1050 3850 50  0001 C CNN "MFN"
+F 6 "901-144-8RFX" H 1050 3850 50  0001 C CNN "PN"
+	1    1050 3850
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR014
 U 1 1 5B05796D
-P 1700 4050
-F 0 "#PWR014" H 1700 3800 50  0001 C CNN
-F 1 "GND" H 1700 3900 50  0000 C CNN
-F 2 "" H 1700 4050 50  0001 C CNN
-F 3 "" H 1700 4050 50  0001 C CNN
-	1    1700 4050
+P 1050 4250
+F 0 "#PWR014" H 1050 4000 50  0001 C CNN
+F 1 "GND" H 1050 4100 50  0000 C CNN
+F 2 "" H 1050 4250 50  0001 C CNN
+F 3 "" H 1050 4250 50  0001 C CNN
+	1    1050 4250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -805,8 +806,6 @@ Wire Wire Line
 Wire Wire Line
 	3750 4900 3750 3950
 Wire Wire Line
-	1900 3850 2050 3850
-Wire Wire Line
 	2800 5200 2800 5300
 Wire Wire Line
 	3400 4900 3750 4900
@@ -961,15 +960,15 @@ R16 and piezo capacitance\nform a low-pass filter. \nChange R16 to set the \ncut
 $Comp
 L Connector:Conn_Coaxial J11
 U 1 1 5F57DB71
-P 1650 2500
-F 0 "J11" H 1650 2650 50  0000 C CNN
-F 1 "Curr_In (Out2)" V 1750 2500 50  0000 C CNN
-F 2 "Connector_Coaxial:SMA_Amphenol_132134_Vertical" H 1650 2500 50  0001 C CNN
-F 3 "" H 1650 2500 50  0001 C CNN
-F 4 "" H 1650 2500 60  0001 C CNN "Config"
-F 5 "Amphenol" H 1650 2500 50  0001 C CNN "MFN"
-F 6 "901-144-8RFX" H 1650 2500 50  0001 C CNN "PN"
-	1    1650 2500
+P 1050 2500
+F 0 "J11" H 1050 2650 50  0000 C CNN
+F 1 "Curr_In (Out2)" V 1150 2500 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134_Vertical" H 1050 2500 50  0001 C CNN
+F 3 "" H 1050 2500 50  0001 C CNN
+F 4 "" H 1050 2500 60  0001 C CNN "Config"
+F 5 "Amphenol" H 1050 2500 50  0001 C CNN "MFN"
+F 6 "901-144-8RFX" H 1050 2500 50  0001 C CNN "PN"
+	1    1050 2500
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -1010,12 +1009,12 @@ $EndComp
 $Comp
 L power:GND #PWR0113
 U 1 1 5F57DBB3
-P 1650 2700
-F 0 "#PWR0113" H 1650 2450 50  0001 C CNN
-F 1 "GND" H 1650 2550 50  0000 C CNN
-F 2 "" H 1650 2700 50  0001 C CNN
-F 3 "" H 1650 2700 50  0001 C CNN
-	1    1650 2700
+P 1050 2950
+F 0 "#PWR0113" H 1050 2700 50  0001 C CNN
+F 1 "GND" H 1050 2800 50  0000 C CNN
+F 2 "" H 1050 2950 50  0001 C CNN
+F 3 "" H 1050 2950 50  0001 C CNN
+	1    1050 2950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1185,8 +1184,6 @@ Wire Wire Line
 Wire Wire Line
 	2200 1250 2500 1250
 Wire Wire Line
-	1850 2500 1950 2500
-Wire Wire Line
 	4500 1600 4500 1700
 Wire Wire Line
 	4550 1700 4500 1700
@@ -1341,4 +1338,62 @@ F 5 "OPA1602AIDR" H 4600 2100 50  0001 C CNN "PN"
 	1    4600 2100
 	1    0    0    1   
 $EndComp
+$Comp
+L Device:R_Small R28
+U 1 1 5FAF2109
+P 1550 2700
+F 0 "R28" H 1580 2720 50  0000 L CNN
+F 1 "1M" H 1580 2660 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1550 2700 50  0001 C CNN
+F 3 "" H 1550 2700 50  0001 C CNN
+F 4 "Panasonic" H 1550 2700 60  0001 C CNN "MFN"
+F 5 "ERJ-3RED1004V" H 1550 2700 50  0001 C CNN "PN"
+	1    1550 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 2500 1550 2500
+Wire Wire Line
+	1550 2600 1550 2500
+Connection ~ 1550 2500
+Wire Wire Line
+	1550 2500 1950 2500
+Wire Wire Line
+	1550 2800 1550 2850
+Wire Wire Line
+	1550 2850 1050 2850
+Wire Wire Line
+	1050 2850 1050 2700
+Wire Wire Line
+	1050 2850 1050 2950
+Connection ~ 1050 2850
+$Comp
+L Device:R_Small R30
+U 1 1 5FB11C66
+P 1550 4050
+F 0 "R30" H 1580 4070 50  0000 L CNN
+F 1 "1M" H 1580 4010 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1550 4050 50  0001 C CNN
+F 3 "" H 1550 4050 50  0001 C CNN
+F 4 "Panasonic" H 1550 4050 60  0001 C CNN "MFN"
+F 5 "ERJ-3RED1004V" H 1550 4050 50  0001 C CNN "PN"
+	1    1550 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 3850 1550 3850
+Wire Wire Line
+	1550 3950 1550 3850
+Connection ~ 1550 3850
+Wire Wire Line
+	1550 3850 2050 3850
+Wire Wire Line
+	1050 4050 1050 4200
+Wire Wire Line
+	1550 4150 1550 4200
+Wire Wire Line
+	1550 4200 1050 4200
+Connection ~ 1050 4200
+Wire Wire Line
+	1050 4200 1050 4250
 $EndSCHEMATC
