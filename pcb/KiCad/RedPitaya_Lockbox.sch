@@ -5,103 +5,26 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 3
 Title "RedPitaya Lockbox"
-Date "2020-11-13"
-Rev "1.4.1"
+Date "2021-09-29"
+Rev "1.5"
 Comp "Atoms-Photons-Quanta, Institut für Angewandte Physik, TU Darmstadt"
 Comment1 "Tilman Preuschoff"
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 1500 1000 2    60   Output ~ 0
-+15V
-Text GLabel 1450 7300 2    60   Output ~ 0
--15V
-Wire Wire Line
-	1300 7000 1350 7000
-Wire Wire Line
-	1350 7000 1350 7100
-Wire Wire Line
-	1300 7300 1350 7300
-Connection ~ 1350 7300
-Wire Wire Line
-	1300 7200 1350 7200
-Connection ~ 1350 7200
-Wire Wire Line
-	1300 7100 1350 7100
-Connection ~ 1350 7100
-Wire Wire Line
-	1400 1300 1300 1300
-Wire Wire Line
-	1400 1000 1400 1100
-Wire Wire Line
-	1300 1000 1400 1000
-Connection ~ 1400 1000
-Wire Wire Line
-	1300 1100 1400 1100
-Connection ~ 1400 1100
-Wire Wire Line
-	1300 1200 1400 1200
-Connection ~ 1400 1200
-Wire Wire Line
-	1300 3800 1350 3800
-Wire Wire Line
-	1350 3800 1350 3900
-Wire Wire Line
-	1350 4300 1300 4300
-Wire Wire Line
-	1300 4200 1350 4200
-Connection ~ 1350 4200
-Wire Wire Line
-	1300 4100 1350 4100
-Connection ~ 1350 4100
-Wire Wire Line
-	1300 4000 1350 4000
-Connection ~ 1350 4000
-Wire Wire Line
-	1300 3900 1350 3900
-Connection ~ 1350 3900
-Wire Wire Line
-	1550 4050 1550 4150
-Wire Wire Line
-	1550 4050 1350 4050
-Connection ~ 1350 4050
-$Comp
-L power:GND #PWR01
-U 1 1 5B04393C
-P 1550 4150
-F 0 "#PWR01" H 1550 3900 50  0001 C CNN
-F 1 "GND" H 1550 4000 50  0000 C CNN
-F 2 "" H 1550 4150 50  0001 C CNN
-F 3 "" H 1550 4150 50  0001 C CNN
-	1    1550 4150
-	1    0    0    -1  
-$EndComp
 $Sheet
-S 2050 4300 4600 3050
+S 2250 4300 4600 3050
 U 5B053798
 F0 "Supply_Ref" 60
 F1 "Supply_Ref.sch" 60
 $EndSheet
 $Sheet
-S 2050 900  5900 3000
+S 2250 850  5900 3000
 U 5B057307
 F0 "Piezo_Controller" 60
 F1 "Piezo_Controller.sch" 60
 $EndSheet
-$Comp
-L Connector:C64AC J1
-U 1 1 5B08A8E7
-P 1000 4200
-F 0 "J1" H 1000 7500 50  0000 C CNN
-F 1 "C64AC" V 1250 4200 50  0000 C CNN
-F 2 "custom:Socket_DIN41612-CaseC1-AC-Male-64Pin-2rows" H 1000 4200 50  0001 C CNN
-F 3 "" H 1000 4200 50  0001 C CNN
-F 4 "Harting" H 1000 4200 50  0001 C CNN "MFN"
-F 5 "09031646921" H 1000 4200 50  0001 C CNN "PN"
-	1    1000 4200
-	-1   0    0    -1  
-$EndComp
 $Comp
 L RedPitaya:RedPitaya_125-14 RP1
 U 1 1 5B08C1E4
@@ -158,28 +81,6 @@ F 3 "" H 9800 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 7300 1450 7300
-Wire Wire Line
-	1350 7200 1350 7300
-Wire Wire Line
-	1350 7100 1350 7200
-Wire Wire Line
-	1400 1000 1500 1000
-Wire Wire Line
-	1400 1100 1400 1200
-Wire Wire Line
-	1400 1200 1400 1300
-Wire Wire Line
-	1350 4200 1350 4300
-Wire Wire Line
-	1350 4100 1350 4200
-Wire Wire Line
-	1350 4000 1350 4050
-Wire Wire Line
-	1350 3900 1350 4000
-Wire Wire Line
-	1350 4050 1350 4100
-Wire Wire Line
 	9800 3250 9800 3550
 Wire Wire Line
 	9800 3650 9800 3700
@@ -205,92 +106,8 @@ NoConn ~ 9900 2950
 NoConn ~ 9900 3050
 NoConn ~ 9900 3350
 NoConn ~ 9900 3450
-NoConn ~ 1300 1400
-NoConn ~ 1300 1500
-NoConn ~ 1300 1600
-NoConn ~ 1300 1700
-NoConn ~ 1300 1800
-NoConn ~ 1300 1900
-NoConn ~ 1300 2000
-NoConn ~ 1300 2100
-NoConn ~ 1300 2200
-NoConn ~ 1300 2300
-NoConn ~ 1300 2400
-NoConn ~ 1300 2500
-NoConn ~ 1300 2600
-NoConn ~ 1300 2700
-NoConn ~ 1300 2800
-NoConn ~ 1300 2900
-NoConn ~ 1300 3000
-NoConn ~ 1300 3100
-NoConn ~ 1300 3200
-NoConn ~ 1300 3300
-NoConn ~ 1300 3400
-NoConn ~ 1300 3500
-NoConn ~ 1300 3600
-NoConn ~ 1300 3700
-NoConn ~ 1300 4400
-NoConn ~ 1300 4500
-NoConn ~ 1300 4600
-NoConn ~ 1300 4700
-NoConn ~ 1300 4800
-NoConn ~ 1300 4900
-NoConn ~ 1300 5000
-NoConn ~ 1300 5100
-NoConn ~ 1300 5200
-NoConn ~ 1300 5300
-NoConn ~ 1300 5400
-NoConn ~ 1300 5500
-NoConn ~ 1300 5600
-NoConn ~ 1300 5700
-NoConn ~ 1300 5800
-NoConn ~ 1300 5900
-NoConn ~ 1300 6000
-NoConn ~ 1300 6100
-NoConn ~ 1300 6200
-NoConn ~ 1300 6300
-NoConn ~ 1300 6400
-NoConn ~ 1300 6500
-NoConn ~ 1300 6600
-NoConn ~ 1300 6700
-NoConn ~ 1300 6800
-NoConn ~ 1300 6900
 Text GLabel 9800 1150 0    60   Input ~ 0
 +5V
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 5D744239
-P 1400 1000
-F 0 "#FLG0101" H 1400 1075 50  0001 C CNN
-F 1 "PWR_FLAG" H 1400 1173 50  0000 C CNN
-F 2 "" H 1400 1000 50  0001 C CNN
-F 3 "~" H 1400 1000 50  0001 C CNN
-	1    1400 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG0102
-U 1 1 5D745083
-P 1350 7300
-F 0 "#FLG0102" H 1350 7375 50  0001 C CNN
-F 1 "PWR_FLAG" H 1350 7473 50  0000 C CNN
-F 2 "" H 1350 7300 50  0001 C CNN
-F 3 "~" H 1350 7300 50  0001 C CNN
-	1    1350 7300
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG0106
-U 1 1 5D746E3D
-P 1550 4050
-F 0 "#FLG0106" H 1550 4125 50  0001 C CNN
-F 1 "PWR_FLAG" H 1550 4223 50  0000 C CNN
-F 2 "" H 1550 4050 50  0001 C CNN
-F 3 "~" H 1550 4050 50  0001 C CNN
-	1    1550 4050
-	1    0    0    -1  
-$EndComp
-Connection ~ 1550 4050
 $Comp
 L Custom_logos:Logo_APQ LOGO1
 U 1 1 5F6D3841
@@ -346,4 +163,485 @@ F 3 "~" H 9100 6750 50  0001 C CNN
 	1    8800 6750
 	1    0    0    -1  
 $EndComp
+Text GLabel 1700 1300 2    60   Output ~ 0
++15V
+Text GLabel 1850 6750 2    60   Output ~ 0
+-15V
+Wire Wire Line
+	1200 1000 1300 1000
+Connection ~ 1300 1000
+Wire Wire Line
+	1200 1100 1300 1100
+$Comp
+L power:GND #PWR01
+U 1 1 5B04393C
+P 1700 5700
+F 0 "#PWR01" H 1700 5450 50  0001 C CNN
+F 1 "GND" H 1700 5550 50  0000 C CNN
+F 2 "" H 1700 5700 50  0001 C CNN
+F 3 "" H 1700 5700 50  0001 C CNN
+	1    1700 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1000 1400 1000
+NoConn ~ 1200 1600
+NoConn ~ 1200 1700
+NoConn ~ 1200 1800
+NoConn ~ 1200 1900
+NoConn ~ 1200 2000
+NoConn ~ 1200 2100
+NoConn ~ 1200 2200
+NoConn ~ 1200 2300
+NoConn ~ 1200 2400
+NoConn ~ 1200 2500
+NoConn ~ 1200 2600
+NoConn ~ 1200 2700
+NoConn ~ 1200 2800
+NoConn ~ 1200 2900
+NoConn ~ 1200 3000
+NoConn ~ 1200 3100
+NoConn ~ 1200 3200
+NoConn ~ 1200 3300
+NoConn ~ 1200 3400
+NoConn ~ 1200 3500
+NoConn ~ 1200 3600
+NoConn ~ 1200 3700
+NoConn ~ 1200 4600
+NoConn ~ 1200 4700
+NoConn ~ 1200 4800
+NoConn ~ 1200 4900
+NoConn ~ 1200 5000
+NoConn ~ 1200 5100
+NoConn ~ 1200 5200
+NoConn ~ 1200 5300
+NoConn ~ 1200 5400
+NoConn ~ 1200 5500
+NoConn ~ 1200 5600
+NoConn ~ 1200 5700
+NoConn ~ 1200 5800
+NoConn ~ 1200 5900
+NoConn ~ 1200 6000
+NoConn ~ 1200 6100
+NoConn ~ 1200 6200
+NoConn ~ 1200 6300
+NoConn ~ 1200 6400
+NoConn ~ 1200 6500
+NoConn ~ 1200 6600
+NoConn ~ 1200 6700
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5D8E1324
+P 1750 6450
+F 0 "#FLG0101" H 1750 6525 50  0001 C CNN
+F 1 "PWR_FLAG" H 1750 6623 50  0000 C CNN
+F 2 "" H 1750 6450 50  0001 C CNN
+F 3 "~" H 1750 6450 50  0001 C CNN
+	1    1750 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5D8E172B
+P 1650 1700
+F 0 "#FLG0102" H 1650 1775 50  0001 C CNN
+F 1 "PWR_FLAG" H 1650 1873 50  0000 C CNN
+F 2 "" H 1650 1700 50  0001 C CNN
+F 3 "~" H 1650 1700 50  0001 C CNN
+	1    1650 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5D8E195F
+P 1550 5550
+F 0 "#FLG0103" H 1550 5625 50  0001 C CNN
+F 1 "PWR_FLAG" H 1550 5723 50  0000 C CNN
+F 2 "" H 1550 5550 50  0001 C CNN
+F 3 "~" H 1550 5550 50  0001 C CNN
+	1    1550 5550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:C64AC J1
+U 1 1 5B08A8E7
+P 900 4200
+F 0 "J1" H 900 7550 50  0000 C CNN
+F 1 "C64AC" V 1150 4200 50  0000 C CNN
+F 2 "custom:Socket_DIN41612-CaseC1-AC-Male-64Pin-2rows" H 900 4200 50  0001 C CNN
+F 3 "" H 900 4200 50  0001 C CNN
+F 4 "" H 900 4200 50  0001 C CNN "Config"
+F 5 "Harting" H 900 4200 50  0001 C CNN "MFN"
+F 6 "09031646921" H 900 4200 50  0001 C CNN "PN"
+	1    900  4200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NC_Small JP6
+U 1 1 614B49D3
+P 1550 3200
+F 0 "JP6" H 1550 3412 50  0000 C CNN
+F 1 "GND" H 1550 3321 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1550 3200 50  0001 C CNN
+F 3 "~" H 1550 3200 50  0001 C CNN
+F 4 "DNF" H 1550 3200 50  0001 C CNN "Config"
+	1    1550 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NC_Small JP13
+U 1 1 614BA1F4
+P 1550 5300
+F 0 "JP13" H 1550 5512 50  0000 C CNN
+F 1 "GND" H 1550 5421 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1550 5300 50  0001 C CNN
+F 3 "~" H 1550 5300 50  0001 C CNN
+F 4 "DNF" H 1550 5300 50  0001 C CNN "Config"
+	1    1550 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NC_Small JP12
+U 1 1 614BA49D
+P 1550 5000
+F 0 "JP12" H 1550 5212 50  0000 C CNN
+F 1 "GND" H 1550 5121 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1550 5000 50  0001 C CNN
+F 3 "~" H 1550 5000 50  0001 C CNN
+F 4 "DNF" H 1550 5000 50  0001 C CNN "Config"
+	1    1550 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NC_Small JP7
+U 1 1 614BA6FE
+P 1550 3500
+F 0 "JP7" H 1550 3712 50  0000 C CNN
+F 1 "GND" H 1550 3621 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1550 3500 50  0001 C CNN
+F 3 "~" H 1550 3500 50  0001 C CNN
+F 4 "DNF" H 1550 3500 50  0001 C CNN "Config"
+	1    1550 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NC_Small JP11
+U 1 1 614BA937
+P 1550 4700
+F 0 "JP11" H 1550 4912 50  0000 C CNN
+F 1 "GND" H 1550 4821 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1550 4700 50  0001 C CNN
+F 3 "~" H 1550 4700 50  0001 C CNN
+F 4 "DNF" H 1550 4700 50  0001 C CNN "Config"
+	1    1550 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NC_Small JP10
+U 1 1 614BAAC4
+P 1550 4400
+F 0 "JP10" H 1550 4612 50  0000 C CNN
+F 1 "GND" H 1550 4521 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1550 4400 50  0001 C CNN
+F 3 "~" H 1550 4400 50  0001 C CNN
+F 4 "DNF" H 1550 4400 50  0001 C CNN "Config"
+	1    1550 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NC_Small JP8
+U 1 1 614BACB5
+P 1550 3800
+F 0 "JP8" H 1550 4012 50  0000 C CNN
+F 1 "GND" H 1550 3921 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1550 3800 50  0001 C CNN
+F 3 "~" H 1550 3800 50  0001 C CNN
+F 4 "DNF" H 1550 3800 50  0001 C CNN "Config"
+	1    1550 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NC_Small JP9
+U 1 1 614BB04C
+P 1550 4100
+F 0 "JP9" H 1550 4312 50  0000 C CNN
+F 1 "GND" H 1550 4221 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1550 4100 50  0001 C CNN
+F 3 "~" H 1550 4100 50  0001 C CNN
+F 4 "DNF" H 1550 4100 50  0001 C CNN "Config"
+	1    1550 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 3800 1250 3800
+Wire Wire Line
+	1250 3800 1250 3200
+Wire Wire Line
+	1250 3200 1450 3200
+Wire Wire Line
+	1200 3900 1300 3900
+Wire Wire Line
+	1300 3900 1300 3500
+Wire Wire Line
+	1300 3500 1450 3500
+Wire Wire Line
+	1200 4000 1350 4000
+Wire Wire Line
+	1350 4000 1350 3800
+Wire Wire Line
+	1350 3800 1450 3800
+Wire Wire Line
+	1200 4100 1450 4100
+Wire Wire Line
+	1200 4500 1250 4500
+Wire Wire Line
+	1250 4500 1250 5300
+Wire Wire Line
+	1250 5300 1450 5300
+Wire Wire Line
+	1200 4400 1300 4400
+Wire Wire Line
+	1300 4400 1300 5000
+Wire Wire Line
+	1300 5000 1450 5000
+Wire Wire Line
+	1200 4300 1350 4300
+Wire Wire Line
+	1350 4300 1350 4700
+Wire Wire Line
+	1350 4700 1450 4700
+Wire Wire Line
+	1200 4200 1400 4200
+Wire Wire Line
+	1400 4200 1400 4400
+Wire Wire Line
+	1400 4400 1450 4400
+Wire Wire Line
+	1650 3200 1700 3200
+Wire Wire Line
+	1700 3200 1700 3500
+Wire Wire Line
+	1700 5300 1650 5300
+Wire Wire Line
+	1650 5000 1700 5000
+Connection ~ 1700 5000
+Wire Wire Line
+	1700 5000 1700 5300
+Wire Wire Line
+	1650 4700 1700 4700
+Connection ~ 1700 4700
+Wire Wire Line
+	1700 4700 1700 5000
+Wire Wire Line
+	1650 4400 1700 4400
+Connection ~ 1700 4400
+Wire Wire Line
+	1700 4400 1700 4700
+Wire Wire Line
+	1650 4100 1700 4100
+Connection ~ 1700 4100
+Wire Wire Line
+	1700 4100 1700 4400
+Wire Wire Line
+	1650 3800 1700 3800
+Connection ~ 1700 3800
+Wire Wire Line
+	1700 3800 1700 4100
+Wire Wire Line
+	1650 3500 1700 3500
+Connection ~ 1700 3500
+Wire Wire Line
+	1700 3500 1700 3800
+Wire Wire Line
+	1700 5300 1700 5550
+Connection ~ 1700 5300
+Wire Wire Line
+	1550 5550 1700 5550
+Connection ~ 1700 5550
+Wire Wire Line
+	1700 5550 1700 5700
+$Comp
+L Device:Jumper_NC_Small JP3
+U 1 1 615158E2
+P 1500 1000
+F 0 "JP3" H 1500 1212 50  0000 C CNN
+F 1 "+15V" H 1500 1121 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1500 1000 50  0001 C CNN
+F 3 "~" H 1500 1000 50  0001 C CNN
+F 4 "DNF" H 1500 1000 50  0001 C CNN "Config"
+	1    1500 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1100 1300 1000
+NoConn ~ 1200 1500
+NoConn ~ 1200 1400
+$Comp
+L Device:Jumper_NC_Small JP5
+U 1 1 6152EB89
+P 1500 1600
+F 0 "JP5" H 1500 1812 50  0000 C CNN
+F 1 "+15V" H 1500 1721 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1500 1600 50  0001 C CNN
+F 3 "~" H 1500 1600 50  0001 C CNN
+F 4 "DNF" H 1500 1600 50  0001 C CNN "Config"
+	1    1500 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NC_Small JP4
+U 1 1 6152FDF0
+P 1500 1300
+F 0 "JP4" H 1500 1512 50  0000 C CNN
+F 1 "+15V" H 1500 1421 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1500 1300 50  0001 C CNN
+F 3 "~" H 1500 1300 50  0001 C CNN
+F 4 "DNF" H 1500 1300 50  0001 C CNN "Config"
+	1    1500 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 1200 1350 1200
+Wire Wire Line
+	1350 1200 1350 1300
+Wire Wire Line
+	1350 1300 1400 1300
+Wire Wire Line
+	1200 1300 1300 1300
+Wire Wire Line
+	1300 1300 1300 1600
+Wire Wire Line
+	1300 1600 1400 1600
+Wire Wire Line
+	1700 1300 1650 1300
+Wire Wire Line
+	1600 1000 1650 1000
+Wire Wire Line
+	1650 1000 1650 1300
+Connection ~ 1650 1300
+Wire Wire Line
+	1650 1300 1600 1300
+Wire Wire Line
+	1600 1600 1650 1600
+Wire Wire Line
+	1650 1600 1650 1300
+Wire Wire Line
+	1650 1600 1650 1700
+Connection ~ 1650 1600
+$Comp
+L power:GND #PWR0111
+U 1 1 6156D967
+P 1850 900
+F 0 "#PWR0111" H 1850 650 50  0001 C CNN
+F 1 "GND" H 1855 727 50  0000 C CNN
+F 2 "" H 1850 900 50  0001 C CNN
+F 3 "" H 1850 900 50  0001 C CNN
+	1    1850 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP1
+U 1 1 6156E035
+P 1500 700
+F 0 "JP1" H 1500 885 50  0000 C CNN
+F 1 "GND" H 1500 794 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1500 700 50  0001 C CNN
+F 3 "~" H 1500 700 50  0001 C CNN
+F 4 "DNF" H 1500 700 50  0001 C CNN "Config"
+	1    1500 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 700  1850 700 
+Wire Wire Line
+	1850 700  1850 900 
+Wire Wire Line
+	1300 1000 1300 700 
+Wire Wire Line
+	1300 700  1400 700 
+$Comp
+L Device:Jumper_NC_Small JP14
+U 1 1 615805B0
+P 1550 6750
+F 0 "JP14" H 1550 6962 50  0000 C CNN
+F 1 "-15V" H 1550 6871 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1550 6750 50  0001 C CNN
+F 3 "~" H 1550 6750 50  0001 C CNN
+F 4 "DNF" H 1550 6750 50  0001 C CNN "Config"
+	1    1550 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NC_Small JP15
+U 1 1 61580EF2
+P 1550 7300
+F 0 "JP15" H 1550 7512 50  0000 C CNN
+F 1 "-15V" H 1550 7421 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1550 7300 50  0001 C CNN
+F 3 "~" H 1550 7300 50  0001 C CNN
+F 4 "DNF" H 1550 7300 50  0001 C CNN "Config"
+	1    1550 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 7300 1400 7300
+Wire Wire Line
+	1200 7200 1400 7200
+Wire Wire Line
+	1400 7200 1400 7300
+Connection ~ 1400 7300
+Wire Wire Line
+	1400 7300 1450 7300
+$Comp
+L Device:Jumper_NO_Small JP2
+U 1 1 615D2F6D
+P 1550 7000
+F 0 "JP2" H 1550 7185 50  0000 C CNN
+F 1 "+15V" H 1550 7094 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1550 7000 50  0001 C CNN
+F 3 "~" H 1550 7000 50  0001 C CNN
+F 4 "DNF" H 1550 7000 50  0001 C CNN "Config"
+	1    1550 7000
+	1    0    0    -1  
+$EndComp
+Text GLabel 1850 7000 2    60   Output ~ 0
++15V
+Wire Wire Line
+	1650 7000 1850 7000
+Wire Wire Line
+	1850 6750 1750 6750
+Wire Wire Line
+	1200 6900 1250 6900
+Wire Wire Line
+	1200 6800 1250 6800
+Wire Wire Line
+	1250 6800 1250 6450
+Wire Wire Line
+	1250 6450 1750 6450
+Wire Wire Line
+	1750 6450 1750 6750
+Connection ~ 1750 6750
+Wire Wire Line
+	1750 6750 1650 6750
+Wire Wire Line
+	1250 6900 1250 6800
+Connection ~ 1250 6800
+Wire Wire Line
+	1200 7000 1350 7000
+Wire Wire Line
+	1450 6750 1350 6750
+Wire Wire Line
+	1350 6750 1350 7000
+Connection ~ 1350 7000
+Wire Wire Line
+	1350 7000 1450 7000
+Wire Wire Line
+	1350 7100 1350 7000
+Wire Wire Line
+	1200 7100 1350 7100
+Connection ~ 1750 6450
+Wire Wire Line
+	1750 6750 1750 7300
+Wire Wire Line
+	1650 7300 1750 7300
 $EndSCHEMATC

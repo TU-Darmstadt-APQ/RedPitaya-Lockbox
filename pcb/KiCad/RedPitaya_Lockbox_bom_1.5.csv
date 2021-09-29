@@ -38,14 +38,14 @@ Component,Quantity Per PCB,References,Value,MFN,PN,Description,Footprint,Alterna
 
 
 
-Component Groups:,37
-Component Count:,80
+Component Groups:,42
+Component Count:,95
 Fitted Components:,75
 Number of PCBs:,1
 Total components:,75
-Schematic Version:,1.4.1
-Schematic Date:,2020-11-13
+Schematic Version:,1.5
+Schematic Date:,2021-09-29
 PCB Variant:,[u'default']
-BoM Date:,15.09.2021 10:48:37
+BoM Date:,29.09.2021 21:11:12
 Schematic Source:,C:\Users\Tilman Preuschoff\Documents\GitHub\RedPitaya-Lockbox\pcb\KiCad\RedPitaya_Lockbox.sch
 KiCad Version:,Eeschema (5.1.9)-1
