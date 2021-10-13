@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
 Title "RedPitaya Lockbox: +/-12V,+5V Supply and +10V Reference"
-Date "2020-11-13"
-Rev "1.4.1"
+Date "2021-10-13"
+Rev "1.5.1"
 Comp "Atoms-Photons-Quanta, Institut für Angewandte Physik, TU Darmstadt"
 Comment1 "Tilman Preuschoff"
 Comment2 ""
@@ -26,7 +26,7 @@ F 5 "GMK325BJ106MN-T" H 2050 3450 50  0001 C CNN "PN"
 	1    2050 3450
 	1    0    0    -1  
 $EndComp
-Text GLabel 4500 1550 2    60   Output ~ 0
+Text GLabel 4800 1550 2    60   Output ~ 0
 +12V
 Text GLabel 4550 3600 2    60   Output ~ 0
 -12V
@@ -713,7 +713,7 @@ Wire Wire Line
 Wire Wire Line
 	4150 2600 4150 3350
 Wire Wire Line
-	4150 2600 4800 2600
+	4150 2600 4500 2600
 Wire Wire Line
 	1500 5300 1650 5300
 Wire Wire Line
@@ -852,4 +852,27 @@ Wire Wire Line
 Connection ~ 4800 2600
 Wire Wire Line
 	4800 5650 4800 5750
+$Comp
+L Device:D_Schottky D1
+U 1 1 61675730
+P 4500 2000
+F 0 "D1" V 4454 2080 50  0000 L CNN
+F 1 "BAT54" V 4545 2080 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-323" H 4500 2000 50  0001 C CNN
+F 3 "~" H 4500 2000 50  0001 C CNN
+F 4 "Panjit" V 4500 2000 50  0001 C CNN "MFN"
+F 5 "BAT54WS_R1_00001" V 4500 2000 50  0001 C CNN "PN"
+	1    4500 2000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4500 2150 4500 2600
+Connection ~ 4500 2600
+Wire Wire Line
+	4500 2600 4800 2600
+Wire Wire Line
+	4500 1850 4500 1550
+Wire Wire Line
+	4500 1550 4800 1550
+Connection ~ 4500 1550
 $EndSCHEMATC

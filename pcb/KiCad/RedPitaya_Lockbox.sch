@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 3
 Title "RedPitaya Lockbox"
-Date "2021-09-29"
-Rev "1.5"
+Date "2021-10-13"
+Rev "1.5.1"
 Comp "Atoms-Photons-Quanta, Institut für Angewandte Physik, TU Darmstadt"
 Comment1 "Tilman Preuschoff"
 Comment2 ""
