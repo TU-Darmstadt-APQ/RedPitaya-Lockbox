@@ -758,7 +758,7 @@ F 2 "custom:Pin_Header_Straight_1x03_Pitch2.54mm_Friction_Lock" H 9150 1700 50  
 F 3 "" H 9150 1700 50  0001 C CNN
 F 4 "Vishay" H 9150 1700 50  0001 C CNN "MFN"
 F 5 "534B1103JC" H 9150 1700 50  0001 C CNN "PN"
-F 6 "DNF" H 9150 1700 50  0001 C CNN "Config"
+F 6 "" H 9150 1700 50  0001 C CNN "Config"
 	1    9150 1700
 	1    0    0    1   
 $EndComp

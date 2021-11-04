@@ -34,13 +34,14 @@ Component,Quantity Per PCB,References,Value,MFN,PN,Description,Footprint,Alterna
 33,4,R11 R18 R26 R29,49.9,Yageo,RC1210FR-0749R9L,"Resistor, small symbol",R_1210_3225Metric,
 34,1,R5,52.3k,Susumu,RR0816P-5232-D-70C,"Resistor, small symbol",R_0603_1608Metric,
 35,1,RP1,RedPitaya_125-14,Samtec,ESQ-113-44-T-D,StemLab RedPitaya 14bit,RedPitaya_125-14,
-36,1,U5,BUF634,Texas Instruments,BUF634AIDR,"250mA, High-Speed Buffer",SOIC-8_3.9x4.9mm_P1.27mm,
-37,1,U3,LT1236-10,Analog Devices,LT1236ACS8-10#PBF,10V Precision Reference,SOIC-8_3.9x4.9mm_P1.27mm,
-38,1,U1,LT3045EMSE,Analog Devices,LT3045EMSE#PBF,"20V, 500mA, Ultralow Noise, Ultrahigh PSRR Linear Regulator, MSOP Package",MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm,
-39,1,U2,LT3094EMSE,Analog Devices,LT3094EMSE#TRPBF,"–20V, 500mA, Ultralow Noise, Ultrahigh PSRR Negative Linear Regulator",MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm,LT3094EMSE#PBF
-40,1,U6,LT8610,Analog Devices,LT8610EMSE#TRPBF,,MSOP-16-1EP_3x4.039mm_P0.5mm_EP1.651x2.845mm,
-41,2,U7-U8,OPA1602,Texas Instruments,OPA1602AIDR,"Dual SoundPlus High Performance, Bipolar-Input Audio Operational Amplifiers, SOIC-8/MSOP-8",SOIC-8_3.9x4.9mm_P1.27mm,
-42,1,U4,OPA1604,Texas Instruments,OPA1604AIDR,"Quad SoundPlus High Performance, Bipolar-Input Audio Operational Amplifiers, SOIC-14/TSSOP-14",SOIC-14_3.9x8.7mm_P1.27mm,
+36,1,RV1,10k,Vishay,534B1103JC,Potentiometer,Pin_Header_Straight_1x03_Pitch2.54mm_Friction_Lock,
+37,1,U5,BUF634,Texas Instruments,BUF634AIDR,"250mA, High-Speed Buffer",SOIC-8_3.9x4.9mm_P1.27mm,
+38,1,U3,LT1236-10,Analog Devices,LT1236ACS8-10#PBF,10V Precision Reference,SOIC-8_3.9x4.9mm_P1.27mm,
+39,1,U1,LT3045EMSE,Analog Devices,LT3045EMSE#PBF,"20V, 500mA, Ultralow Noise, Ultrahigh PSRR Linear Regulator, MSOP Package",MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm,
+40,1,U2,LT3094EMSE,Analog Devices,LT3094EMSE#TRPBF,"–20V, 500mA, Ultralow Noise, Ultrahigh PSRR Negative Linear Regulator",MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm,LT3094EMSE#PBF
+41,1,U6,LT8610,Analog Devices,LT8610EMSE#TRPBF,,MSOP-16-1EP_3x4.039mm_P0.5mm_EP1.651x2.845mm,
+42,2,U7-U8,OPA1602,Texas Instruments,OPA1602AIDR,"Dual SoundPlus High Performance, Bipolar-Input Audio Operational Amplifiers, SOIC-8/MSOP-8",SOIC-8_3.9x4.9mm_P1.27mm,
+43,1,U4,OPA1604,Texas Instruments,OPA1604AIDR,"Quad SoundPlus High Performance, Bipolar-Input Audio Operational Amplifiers, SOIC-14/TSSOP-14",SOIC-14_3.9x8.7mm_P1.27mm,
 
 
 
@@ -48,11 +49,11 @@ Component,Quantity Per PCB,References,Value,MFN,PN,Description,Footprint,Alterna
 
 Component Groups:,50
 Component Count:,96
-Fitted Components:,76
+Fitted Components:,77
 Number of PCBs:,1
-Total components:,76
+Total components:,77
 Schematic Version:,1.5.1
 Schematic Date:,2021-10-13
-BoM Date:,13.10.2021 16:06:11
+BoM Date:,04.11.2021 15:25:40
 Schematic Source:,C:\Users\Scope\Documents\GitHub\RedPitaya-Lockbox\pcb\KiCad\RedPitaya_Lockbox.sch
 KiCad Version:,Eeschema (5.1.10)-1
