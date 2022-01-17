@@ -1,5 +1,5 @@
-### Module positions - created on 11/04/21 15:22:27 ###
-### Printed by Pcbnew version kicad (5.1.10)-1
+### Module positions - created on 01/17/22 19:14:11 ###
+### Printed by Pcbnew version kicad (5.1.9)-1
 ## Unit = mm, Angle = deg.
 ## Side : top
 # Ref     Val                  Package                                            PosX       PosY       Rot  Side
@@ -23,7 +23,7 @@ C17       10u                  CP_EIA-3528-21_Kemet-B                          9
 C18       100n                 C_0603_1608Metric                              111.3500   -56.6000  180.0000  top
 C19       100n                 C_0603_1608Metric                              111.8000   -46.0000  270.0000  top
 C20       47u                  C_1210_3225Metric                               92.4000  -108.8000   90.0000  top
-C21       100n                 C_1206_3216Metric                               67.2600   -67.2200  180.0000  top
+C21       100n                 C_1206_3216Metric                               72.5000   -67.1000    0.0000  top
 C22       100n                 C_0603_1608Metric                              126.6000   -46.1000  270.0000  top
 C23       100n                 C_0603_1608Metric                              132.1000   -55.0000   90.0000  top
 C24       16p_/_C0G            C_0603_1608Metric                              160.6000   -50.9000    0.0000  top
@@ -31,6 +31,8 @@ C25       16p_/_C0G            C_0603_1608Metric                              17
 C26       100n                 C_0603_1608Metric                              180.1000   -44.9000  180.0000  top
 C27       100n                 C_0603_1608Metric                              169.1000   -49.9000   90.0000  top
 D1        BAT54                D_SOD-323                                       80.4545   -71.8566   90.0000  top
+D2        SMBJ40CA             D_SMB                                           72.0000  -120.2000    0.0000  top
+D3        SMBJ40CA             D_SMB                                           66.3000   -54.8000  180.0000  top
 FB1       TDK_MPZ2012S221A     L_0805_2012Metric                               76.7000   -93.1000    0.0000  top
 J9        RF_Shield_One_Piece  Laird_Technologies_BMI-S-107_44.37x44.37mm      88.7000  -107.9000    0.0000  top
 L2        4.7u                 Coilcraft_MSS1278T                              79.8000  -102.8000    0.0000  top

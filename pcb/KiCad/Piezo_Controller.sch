@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
 Title "RedPitaya Lockbox: Piezo Controller"
-Date "2021-10-13"
-Rev "1.5.1"
+Date "2022-01-17"
+Rev "1.5.2"
 Comp "Atoms-Photons-Quanta, Institut für Angewandte Physik, TU Darmstadt"
 Comment1 "Tilman Preuschoff"
 Comment2 ""

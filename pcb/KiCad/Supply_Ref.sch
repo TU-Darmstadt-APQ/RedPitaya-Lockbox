@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
 Title "RedPitaya Lockbox: +/-12V,+5V Supply and +10V Reference"
-Date "2021-10-13"
-Rev "1.5.1"
+Date "2022-01-17"
+Rev "1.5.2"
 Comp "Atoms-Photons-Quanta, Institut für Angewandte Physik, TU Darmstadt"
 Comment1 "Tilman Preuschoff"
 Comment2 ""
@@ -30,8 +30,6 @@ Text GLabel 4800 1550 2    60   Output ~ 0
 +12V
 Text GLabel 4550 3600 2    60   Output ~ 0
 -12V
-Wire Wire Line
-	1850 1550 2050 1550
 Connection ~ 2050 1550
 Wire Wire Line
 	2350 1650 2250 1650
@@ -107,8 +105,6 @@ Connection ~ 3100 2600
 Wire Wire Line
 	3350 2100 3350 2600
 Connection ~ 3350 2600
-Wire Wire Line
-	1950 3600 2050 3600
 Wire Wire Line
 	2350 3400 2300 3400
 Connection ~ 2300 3600
@@ -643,9 +639,9 @@ F 5 "LT1236ACS8-10#PBF" H 7800 1600 50  0001 C CNN "PN"
 	1    7800 1600
 	1    0    0    -1  
 $EndComp
-Text GLabel 1950 3600 0    60   Input ~ 0
+Text GLabel 950  3600 0    60   Input ~ 0
 -15V
-Text GLabel 1850 1550 0    60   Input ~ 0
+Text GLabel 950  1550 0    60   Input ~ 0
 +15V
 $Comp
 L LinearTechnology:LT3045EMSE U1
@@ -875,4 +871,94 @@ Wire Wire Line
 Wire Wire Line
 	4500 1550 4800 1550
 Connection ~ 4500 1550
+$Comp
+L Device:D_TVS D2
+U 1 1 61E66D74
+P 1550 2050
+F 0 "D2" V 1504 2130 50  0000 L CNN
+F 1 "SMBJ40CA" V 1595 2130 50  0000 L CNN
+F 2 "Diode_SMD:D_SMB" H 1550 2050 50  0001 C CNN
+F 3 "~" H 1550 2050 50  0001 C CNN
+F 4 "Bourns" V 1550 2050 50  0001 C CNN "MFN"
+F 5 "SMBJ40CA-QH" V 1550 2050 50  0001 C CNN "PN"
+	1    1550 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_TVS D3
+U 1 1 61E67517
+P 1550 3000
+F 0 "D3" V 1504 3080 50  0000 L CNN
+F 1 "SMBJ40CA" V 1595 3080 50  0000 L CNN
+F 2 "Diode_SMD:D_SMB" H 1550 3000 50  0001 C CNN
+F 3 "~" H 1550 3000 50  0001 C CNN
+F 4 "Bourns" V 1550 3000 50  0001 C CNN "MFN"
+F 5 "SMBJ40CA-QH" V 1550 3000 50  0001 C CNN "PN"
+	1    1550 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	950  1550 1150 1550
+Wire Wire Line
+	1550 1900 1550 1550
+Connection ~ 1550 1550
+Wire Wire Line
+	1550 1550 2050 1550
+Wire Wire Line
+	950  3600 1150 3600
+Wire Wire Line
+	1550 3150 1550 3600
+Connection ~ 1550 3600
+Wire Wire Line
+	1550 3600 2050 3600
+Wire Wire Line
+	2050 2600 1550 2600
+Wire Wire Line
+	1550 2600 1550 2200
+Wire Wire Line
+	1550 2850 1550 2600
+Connection ~ 1550 2600
+$Comp
+L Device:CP_Small C28
+U 1 1 61E832AC
+P 1150 2050
+F 0 "C28" H 1238 2096 50  0000 L CNN
+F 1 "100u" H 1238 2005 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 1150 2050 50  0001 C CNN
+F 3 "~" H 1150 2050 50  0001 C CNN
+F 4 "Nichicon" H 1150 2050 50  0001 C CNN "MFN"
+F 5 "UHV1V101MED" H 1150 2050 50  0001 C CNN "PN"
+	1    1150 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C29
+U 1 1 61E83AD8
+P 1150 3000
+F 0 "C29" H 1238 3046 50  0000 L CNN
+F 1 "100u" H 1238 2955 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 1150 3000 50  0001 C CNN
+F 3 "~" H 1150 3000 50  0001 C CNN
+F 4 "Nichicon" H 1150 3000 50  0001 C CNN "MFN"
+F 5 "UHV1V101MED" H 1150 3000 50  0001 C CNN "PN"
+	1    1150 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 1950 1150 1550
+Connection ~ 1150 1550
+Wire Wire Line
+	1150 1550 1550 1550
+Wire Wire Line
+	1150 2150 1150 2600
+Wire Wire Line
+	1150 2600 1550 2600
+Wire Wire Line
+	1150 2900 1150 2600
+Connection ~ 1150 2600
+Wire Wire Line
+	1150 3100 1150 3600
+Connection ~ 1150 3600
+Wire Wire Line
+	1150 3600 1550 3600
 $EndSCHEMATC
