@@ -1,6 +1,6 @@
 (sym_lib_table
-  (lib (name RedPitaya)(type Legacy)(uri ${KIPRJMOD}/libraries/redpitaya_125-14.lib)(options "")(descr ""))
-  (lib (name TexasInstruments)(type Legacy)(uri ${KIPRJMOD}/libraries/Texas_Instruments.lib)(options "")(descr ""))
-  (lib (name LinearTechnology)(type Legacy)(uri "${KIPRJMOD}/libraries/Linear Technology.lib")(options "")(descr ""))
-  (lib (name Custom_logos)(type Legacy)(uri ${KIPRJMOD}/libraries/Custom_logos.lib)(options "")(descr ""))
+  (lib (name "RedPitaya")(type "KiCad")(uri "${KIPRJMOD}/libraries/redpitaya_125-14.kicad_sym")(options "")(descr ""))
+  (lib (name "TexasInstruments")(type "KiCad")(uri "${KIPRJMOD}/libraries/Texas_Instruments.kicad_sym")(options "")(descr ""))
+  (lib (name "LinearTechnology")(type "KiCad")(uri "${KIPRJMOD}/libraries/Linear Technology.kicad_sym")(options "")(descr ""))
+  (lib (name "Custom_logos")(type "KiCad")(uri "${KIPRJMOD}/libraries/Custom_logos.kicad_sym")(options "")(descr ""))
 )

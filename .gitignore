@@ -19,3 +19,4 @@ Thumbs.db
 *.tmp
 fp-info-cache
 _autosave-*
+*-backups/
