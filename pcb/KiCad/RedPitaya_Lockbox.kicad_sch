@@ -6,8 +6,8 @@
 
   (title_block
     (title "RedPitaya Lockbox")
-    (date "2022-01-17")
-    (rev "1.5.2")
+    (date "2022-02-22")
+    (rev "1.6")
     (company "Atoms-Photons-Quanta, Institut für Angewandte Physik, TU Darmstadt")
     (comment 1 "Tilman Preuschoff")
   )
@@ -2965,8 +2965,8 @@
     (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005c1aecc1"
       (reference "C23") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
-    (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005f617abc"
-      (reference "C24") (unit 1) (value "16p / C0G") (footprint "Capacitor_SMD:C_0603_1608Metric")
+    (path "/00000000-0000-0000-0000-00005b057307/ba32c028-f96b-40c5-96bd-2c6f5cb0e71f"
+      (reference "C24") (unit 1) (value "10u") (footprint "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B")
     )
     (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005f63a1aa"
       (reference "C25") (unit 1) (value "16p / C0G") (footprint "Capacitor_SMD:C_0603_1608Metric")
@@ -3139,17 +3139,17 @@
     (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005b057987"
       (reference "R16") (unit 1) (value "4.7") (footprint "Resistor_SMD:R_1210_3225Metric")
     )
-    (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005f57dc00"
-      (reference "R17") (unit 1) (value "DNF") (footprint "Resistor_SMD:R_0603_1608Metric")
+    (path "/00000000-0000-0000-0000-00005b057307/85928547-ef90-41f4-89e0-2c16d7077ebc"
+      (reference "R17") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005b0579a2"
       (reference "R18") (unit 1) (value "49.9") (footprint "Resistor_SMD:R_1210_3225Metric")
     )
-    (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005f5efc6b"
-      (reference "R19") (unit 1) (value "2k") (footprint "Resistor_SMD:R_0603_1608Metric")
+    (path "/00000000-0000-0000-0000-00005b057307/e3056e1e-b81f-451c-85a7-a9781a32dd24"
+      (reference "R19") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
-    (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005f57db95"
-      (reference "R20") (unit 1) (value "0") (footprint "Resistor_SMD:R_0603_1608Metric")
+    (path "/00000000-0000-0000-0000-00005b057307/34ea8110-746e-472c-a415-537e7776ba7d"
+      (reference "R20") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005f5f0529"
       (reference "R21") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric")
@@ -3180,6 +3180,15 @@
     )
     (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005fb11c66"
       (reference "R30") (unit 1) (value "1M") (footprint "Resistor_SMD:R_0603_1608Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005b057307/c5e86fd8-41d3-4087-97b4-5d16719c9207"
+      (reference "R31") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0603_1608Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005b057307/691945d5-7544-4393-8de4-ef9a08567d22"
+      (reference "R32") (unit 1) (value "91k") (footprint "Resistor_SMD:R_0603_1608Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005b057307/1b8505fd-6bd4-453d-9c3a-68f9976fea56"
+      (reference "R33") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-00005b08c1e4"
       (reference "RP1") (unit 1) (value "RedPitaya_125-14") (footprint "custom:RedPitaya_125-14")

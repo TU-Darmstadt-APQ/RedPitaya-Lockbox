@@ -6,8 +6,8 @@
 
   (title_block
     (title "RedPitaya Lockbox: +/-12V,+5V Supply and +10V Reference")
-    (date "2022-01-17")
-    (rev "1.5.2")
+    (date "2022-02-22")
+    (rev "1.6")
     (company "Atoms-Photons-Quanta, Institut für Angewandte Physik, TU Darmstadt")
     (comment 1 "Tilman Preuschoff")
   )
@@ -1090,7 +1090,6 @@
       )
     )
   )
-
 
   (junction (at 232.41 35.56) (diameter 0) (color 0 0 0 0)
     (uuid 0445eef5-6ece-4d22-b3d3-216927ad6010)
