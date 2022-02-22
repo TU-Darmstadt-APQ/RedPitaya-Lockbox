@@ -1140,7 +1140,7 @@
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp f4d5987b-377d-484f-83a0-d26e07453a42))
     (pad "2" thru_hole circle locked (at 2.54 -2.54) (size 2.25 2.25) (drill 1.7) (layers *.Cu *.Mask)
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp f8ef65e0-d7d9-4c2c-b81d-41f323f525ce))
-    (model "${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291-12_Vertical.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1282,7 +1282,7 @@
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp 55fa0900-d141-4597-990a-eda29edb12d1))
     (pad "2" thru_hole circle locked (at -2.54 -2.54) (size 2.25 2.25) (drill 1.7) (layers *.Cu *.Mask)
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp 918f9233-4f1a-44c9-a114-4311eadc7528))
-    (model "${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291-12_Vertical.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2548,7 +2548,7 @@
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp 93ca340a-e8ae-4e1b-bdac-fe7f0eea36ae))
     (pad "2" thru_hole circle locked (at -2.54 2.54) (size 2.25 2.25) (drill 1.7) (layers *.Cu *.Mask)
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp 9c5eb8ba-0370-4530-b0dd-d326ff9cd796))
-    (model "${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291-12_Vertical.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3541,7 +3541,7 @@
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp 9acfcfc7-989c-4acc-abb2-e00b92310a55))
     (pad "2" thru_hole circle locked (at 2.54 -2.54) (size 2.25 2.25) (drill 1.7) (layers *.Cu *.Mask)
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp dc503621-5c1c-4419-bb7d-74fb82b8d8c5))
-    (model "${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291-12_Vertical.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4006,7 +4006,7 @@
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp eefbb01a-1017-402d-94d8-5e1519140627))
     (pad "2" thru_hole circle locked (at 2.54 -2.54) (size 2.25 2.25) (drill 1.7) (layers *.Cu *.Mask)
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp fdf1b3e7-069e-4f76-9d87-caaeb7d55ad9))
-    (model "${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291-12_Vertical.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4060,7 +4060,7 @@
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp 524a8897-4b26-49dd-b508-9c5b2f671e31))
     (pad "2" thru_hole circle locked (at 2.54 -2.54) (size 2.25 2.25) (drill 1.7) (layers *.Cu *.Mask)
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp 931e27aa-b13d-4318-a4da-bc41de9026c2))
-    (model "${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291-12_Vertical.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4245,7 +4245,7 @@
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp a36d7b4b-db39-449f-92b3-ad84819e8020))
     (pad "2" thru_hole circle locked (at 2.54 -2.54) (size 2.25 2.25) (drill 1.7) (layers *.Cu *.Mask)
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp afb8b546-2d34-49f9-b048-809d9d067ebb))
-    (model "${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291-12_Vertical.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4299,7 +4299,7 @@
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp 9c352ce5-8dcd-4676-8f85-0d97597fd098))
     (pad "2" thru_hole circle locked (at -2.54 2.54) (size 2.25 2.25) (drill 1.7) (layers *.Cu *.Mask)
       (net 2 "GND") (pinfunction "Ext") (pintype "passive") (tstamp dfdae403-bb08-48d4-b042-b5f0fa182e90))
-    (model "${KISYS3DMOD}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291_Vertical.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_Coaxial.3dshapes/SMA_Amphenol_132291-12_Vertical.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
