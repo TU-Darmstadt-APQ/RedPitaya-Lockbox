@@ -16,8 +16,8 @@ Use the gerber files in this folder to reproduce the design without any changes.
 
 BOM
 -----
-The BOM contains all necessary electronic components. Use [KiBoM](https://github.com/SchrodingersGat/KiBoM) to update the BOM from KiCad:
+The BOM contains all necessary electronic components. Use [KiBoM](https://github.com/SchrodingersGat/KiBoM) to update the BOM from KiCad (replace [KiBOMfolder]):
 
 ```python
-python "[KiBoM folder]/KiBOM_CLI.py" "%I" "%O" "--cfg=bom.ini"
+python "[KiBOMfolder]\KiBOM_CLI.py" "%I" "%O" --cfg "%P\bom.ini" -d ..
 ```
