@@ -1,0 +1,54 @@
+name: pyrpl-env
+channels:
+  - defaults
+dependencies:
+  - asn1crypto=0.24.0=py37_0
+  - bcrypt=3.1.7=py37he774522_0
+  - blas=1.0=mkl
+  - ca-certificates=2019.8.28=0
+  - certifi=2019.9.11=py37_0
+  - cffi=1.12.3=py37h7a1dbc1_0
+  - cryptography=2.7=py37h7a1dbc1_0
+  - icc_rt=2019.0.0=h0cc432a_1
+  - icu=58.2=ha66f8fd_1
+  - idna=2.8=py37_0
+  - intel-openmp=2019.4=245
+  - jpeg=9b=hb83a4c4_2
+  - libpng=1.6.37=h2a8f88b_0
+  - mkl=2019.4=245
+  - mkl-service=2.3.0=py37hb782905_0
+  - mkl_fft=1.0.14=py37h14836fe_0
+  - mkl_random=1.1.0=py37h675688f_0
+  - nose=1.3.7=py37_2
+  - numpy=1.16.5=py37h19fb1c0_0
+  - numpy-base=1.16.5=py37hc3f5095_0
+  - openssl=1.1.1d=he774522_0
+  - pandas=0.25.1=py37ha925a31_0
+  - paramiko=2.6.0=py37_0
+  - pip=19.2.3=py37_0
+  - pycparser=2.19=py37_0
+  - pynacl=1.3.0=py37h62dcd97_0
+  - pyqt=5.9.2=py37h6538335_2
+  - pyqtgraph=0.10.0=py37h28b3542_3
+  - python=3.7.4=h5263a28_0
+  - python-dateutil=2.8.0=py37_0
+  - pytz=2019.2=py_0
+  - pyyaml=5.1.2=py37he774522_0
+  - qt=5.9.7=vc14h73c81de_0
+  - qtpy=1.9.0=py_0
+  - scipy=1.3.1=py37h29ff71c_0
+  - setuptools=41.2.0=py37_0
+  - sip=4.19.8=py37h6538335_0
+  - six=1.12.0=py37_0
+  - sqlite=3.29.0=he774522_0
+  - vc=14.1=h0510ff6_4
+  - vs2015_runtime=14.16.27012=hf0eaf9b_0
+  - wheel=0.33.6=py37_0
+  - wincertstore=0.2=py37_0
+  - yaml=0.1.7=hc54c509_2
+  - zlib=1.2.11=h62dcd97_3
+  - pip:
+    - futures==3.1.1
+    - quamash==0.6.1
+    - scp==0.13.2
+
