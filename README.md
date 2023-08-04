@@ -10,7 +10,7 @@ The controller features:
 
 - Bandwidth of 1.25 MHz
 - Two independent control loops (e.g. laser current and piezo) 
-- Fast output (0\-2 V / power rating 9 dBm) e.g. for laser current
+- Fast output (-1 to 1 V) e.g. for laser current
 - Low-noise piezo output
   - Voltage range: ± 10 V / 250 mA 
   - Variable analog piezo offset (± 10 V)
