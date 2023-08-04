@@ -262,7 +262,7 @@
       )
     )
     (symbol "LT1236-10_1_1"
-      (pin no_connect line (at -10.16 1.27 0) (length 2.54) hide
+      (pin no_connect line (at -6.35 -2.54 90) (length 2.54) hide
         (name "NC" (effects (font (size 1.27 1.27))))
         (number "1" (effects (font (size 1.27 1.27))))
       )
@@ -270,7 +270,7 @@
         (name "Vin" (effects (font (size 1.27 1.27))))
         (number "2" (effects (font (size 1.27 1.27))))
       )
-      (pin no_connect line (at -10.16 1.27 0) (length 2.54) hide
+      (pin no_connect line (at -3.81 -2.54 90) (length 2.54) hide
         (name "NC" (effects (font (size 1.27 1.27))))
         (number "3" (effects (font (size 1.27 1.27))))
       )
@@ -286,7 +286,7 @@
         (name "Vout" (effects (font (size 1.27 1.27))))
         (number "6" (effects (font (size 1.27 1.27))))
       )
-      (pin no_connect line (at -10.16 1.27 0) (length 2.54) hide
+      (pin no_connect line (at 3.81 -2.54 90) (length 2.54) hide
         (name "NC" (effects (font (size 1.27 1.27))))
         (number "7" (effects (font (size 1.27 1.27))))
       )
