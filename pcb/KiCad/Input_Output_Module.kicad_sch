@@ -1545,7 +1545,6 @@
     (property "PN" "BUF634AIDR " (id 5) (at 137.16 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Field4" "1" (id 6) (at 137.16 102.87 0))
     (pin "4" (uuid 8c6d2a68-1e86-4cd8-86da-9252a6831921))
     (pin "7" (uuid 2c75b0fd-8d39-4134-8230-331aada634fa))
     (pin "1" (uuid 0ae91059-c3cb-42ca-b237-3365d95bbdf4))
