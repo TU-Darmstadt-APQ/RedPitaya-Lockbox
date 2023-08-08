@@ -17,11 +17,11 @@ Component,Quantity Per PCB,References,Value,MFN,PN,Description,Footprint,Sheetpa
 16,1,J1,C64AC,Harting,09031646921,"DIN41612 connector, double row (AC), 02x32, script generated (kicad-library-utils/schlib/autogen/connector/)",DIN41612_C_2x32_Male_Horizontal_THT,/
 17,8,J3  J5  J7  J11-J14  J16,Piezo_In (Out1),Amphenol,901-144-8RFX,"coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)",SMA_Amphenol_132134_Vertical,/Input_Output_Module/
 18,2,L2-L3,4.7u,Coilcraft,MSS1278T-472MLD,"Inductor, small symbol",Coilcraft_MSS1278T,/Supply_Ref/
-19,3,R23-R24  R27,0,Vishay,CRCW06030000Z0EB,"Resistor, small symbol",R_0603_1608Metric,/Input_Output_Module/
+19,2,R23  R27,0,Vishay,CRCW06030000Z0EB,"Resistor, small symbol",R_0603_1608Metric,/Input_Output_Module/
 20,1,R16,4.7,Panasonic,ERJ-14YJ4R7U,Resistor,R_1210_3225Metric,/Input_Output_Module/
 21,4,R11  R18  R26  R29,49.9,Yageo,RC1210FR-0749R9L,"Resistor, small symbol",R_1210_3225Metric,/Input_Output_Module/
 22,1,R3,249,Vishay,RCS0603249RFKEA,"Resistor, small symbol",R_0603_1608Metric,/Input_Output_Module/
-23,9,R4  R6  R9  R12  R17  R19-R21  R33,1k,Susumu,RR0816P-102-D,"Resistor, small symbol",R_0603_1608Metric,/Input_Output_Module/
+23,8,R4  R6  R9  R12  R17  R19-R20  R33,1k,Susumu,RR0816P-102-D,"Resistor, small symbol",R_0603_1608Metric,/Input_Output_Module/
 24,2,R8  R14,2k,Susumu,RR0816P-202-D,"Resistor, small symbol",R_0603_1608Metric,/Input_Output_Module/
 25,2,R10  R31,10k,Susumu,RR0816P-103-D,"Resistor, small symbol",R_0603_1608Metric,/Input_Output_Module/
 26,1,R5,52.3k,Susumu,RR0816P-5232-D-70C,"Resistor, small symbol",R_0603_1608Metric,/Supply_Ref/
