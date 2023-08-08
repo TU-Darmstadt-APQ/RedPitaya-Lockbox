@@ -6,8 +6,8 @@
 
   (title_block
     (title "RedPitaya Lockbox")
-    (date "2022-02-22")
-    (rev "1.6")
+    (date "2023-08-08")
+    (rev "1.6.1")
     (company "Atoms-Photons-Quanta, Institut für Angewandte Physik, TU Darmstadt")
     (comment 1 "Tilman Preuschoff")
   )
@@ -2905,12 +2905,6 @@
     (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005f57dc0a"
       (reference "#PWR0117") (unit 1) (value "GND") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005f5d47ac"
-      (reference "#PWR0118") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005f57db9f"
-      (reference "#PWR0119") (unit 1) (value "GND") (footprint "")
-    )
     (path "/00000000-0000-0000-0000-00005b053798/00000000-0000-0000-0000-00005b0ae6a5"
       (reference "C1") (unit 1) (value "4.7u") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
@@ -3166,17 +3160,8 @@
     (path "/00000000-0000-0000-0000-00005b057307/34ea8110-746e-472c-a415-537e7776ba7d"
       (reference "R20") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
-    (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005f5f0529"
-      (reference "R21") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005f5d47a2"
-      (reference "R22") (unit 1) (value "DNF") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
     (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005b0591b4"
       (reference "R23") (unit 1) (value "0") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005f5e0d9a"
-      (reference "R24") (unit 1) (value "0") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-00005b057307/00000000-0000-0000-0000-00005b0591c0"
       (reference "R25") (unit 1) (value "1M") (footprint "Resistor_SMD:R_0603_1608Metric")
