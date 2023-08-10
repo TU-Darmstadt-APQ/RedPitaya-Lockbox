@@ -2317,7 +2317,7 @@
     (property "PN" "36907406S" (id 5) (at 252.73 142.24 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Config" "DNF" (id 6) (at 252.73 142.24 0)
+    (property "Config" "" (id 6) (at 252.73 142.24 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid 209b428c-f384-4919-ad6a-fc6c51b48199))
