@@ -1,0 +1,156 @@
+kibot:
+  version: 1
+
+preflight:
+  run_drc: true
+  run_erc: true
+  update_xml: true
+  ignore_unconnected: false
+
+variants:
+  - name: 'default'
+    comment: 'Minimal PCB without EMI shield'
+    type: kibom
+    file_id: _(default)
+
+outputs:
+  - name: 'gerbers'
+    comment: 'Create the Gerber files for the board house'
+    type: gerber
+    dir: gerber_files
+    options:
+      # generic layer options
+      exclude_edge_layer: false
+      exclude_pads_from_silkscreen: false
+      plot_sheet_reference: false
+      plot_footprint_refs: true
+      plot_footprint_values: true
+      force_plot_invisible_refs_vals: false
+      tent_vias: true
+
+      # gerber options
+      use_aux_axis_as_origin: false
+      subtract_mask_from_silk: false
+      use_protel_extensions: false
+      gerber_precision: 4.6
+      create_gerber_job_file: false
+      use_gerber_x2_attributes: false
+      use_gerber_net_attributes: false
+      output: '%f-%i%I_%r.%x'
+
+    layers:
+      - 'F.Cu'
+      - 'B.Cu'
+      - 'F.Paste'
+      - 'B.Paste'
+      - 'F.Silkscreen'
+      - 'B.Silkscreen'
+      - 'F.Mask'
+      - 'B.Mask'
+      - 'Edge.Cuts'
+      - 'F.Fab'
+      - 'B.Fab'
+      - 'User.Comments'
+      - 'User.Drawings'
+
+  - name: 'excellon_drill'
+    comment: 'Create the Excellon drill files to go with the Gerber files'
+    type: excellon
+    dir: gerber_files
+    options:
+      metric_units: true
+      map:
+        type: ps
+        output: '%f-%i%I_%r.%x'  # %i is defined by npth_id and pth_id
+      use_aux_axis_as_origin: false
+      pth_and_npth_single_file: false
+      zeros_format: 'DECIMAL_FORMAT'
+      npth_id: 'NPTH'
+      pth_id: 'PTH'
+      output: '%f-%i%I_%r.%x'  # %i is defined by npth_id and pth_id
+
+  - name: 'position'
+    comment: 'Pick and place file'
+    type: position
+    dir: positiondir
+    options:
+      format: CSV   # CSV or ASCII format
+      units: millimeters  # millimeters or inches
+      separate_files_for_front_and_back: true
+      use_aux_axis_as_origin: true
+      output: '%f-%i%I_%r%v.%x'
+
+  - name: 'BOM'
+    comment: 'Generate bill of materials (BOM)'
+    type: kibom
+    dir: bom
+    options:
+      format: CSV
+      conf: 'bom.ini'
+      output: '%sp_%I_%sr_(%V).%x'  # Note: The %v replacement is broken, so use _(%V) for now
+    output_id: 'bom'  # Used for the %I expansion int the output file name
+
+  - name: 'iBOM'
+    comment: 'Generate Interactive HTML BOM'
+    type: ibom
+    dir: bom
+    options:
+      dark_mode: false
+      blacklist: 'LOGO*,TP*,H*'
+      extra_fields: 'PN'
+      output: '%sp_%I_%sr%v.%x'
+      highlight_pin1: true
+    output_id: 'ibom'  # Used for the %I expansion int the output file name
+
+  - name: 'pdfs'
+    comment: "Create PDFs of the schematics"
+    type: pdf_sch_print
+    dir: schematics
+    options:
+      title: "+ (%V variant)"
+      output: '%I%v.%x'
+    output_id: 'schematics'  # Used for the %I expansion int the output file name
+
+  - name: 'compress_bom'
+    comment: 'Compress the BOM output'
+    type: compress
+    dir: bom_files_compressed
+    options:
+      files:
+        - from_output: BOM
+        - from_output: iBOM
+      output: '%I%v.%x'
+    output_id: 'bom'  # Used for the %I expansion int the output file name
+
+  - name: 'compress_fab'
+    comment: 'Compress the fabrication output'
+    type: compress
+    dir: gerber_files_compressed
+    options:
+      files:
+        - from_output: gerbers
+        - from_output: excellon_drill
+      output: '%I.%x'
+    output_id: 'gerbers'  # Used for the %I expansion int the output file name
+
+  - name: 'compress_position'
+    comment: "Compress the position files for assembly orders"
+    type: compress
+    dir: gerber_files_compressed
+    options:
+      files:
+        - from_output: position
+      output: '%I%v.%x'
+    output_id: 'pos'  # Used for the %I expansion int the output file name
+
+groups:
+  - name: fab
+    outputs:
+      - gerbers
+      - excellon_drill
+      - position
+
+  - name: bom
+    outputs:
+      - BOM
+      - iBOM
