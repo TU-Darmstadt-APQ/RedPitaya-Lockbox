@@ -10,7 +10,7 @@ on:
       - '**.kicad_sch'
       - '**.kicad_pcb'
       - '.github/workflows/ci.yml'
-      - 'pcb/KiCad/config.kibot.yml'
+      - 'pcb/KiCad/config.kibot.yaml'
     # Ignore the push event when creating tags
     tags-ignore:
       - '[0-9]+.[0-9]+.[0-9]+'
