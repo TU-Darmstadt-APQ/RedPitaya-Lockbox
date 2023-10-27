@@ -10,7 +10,7 @@ on:
       - '**.kicad_sch'
       - '**.kicad_pcb'
       - '.github/workflows/ci.yml'
-      - 'config.kibot.yml'
+      - '**config.kibot.yml'
     # Ignore the push event when creating tags
     tags-ignore:
       - '[0-9]+.[0-9]+.[0-9]+'
@@ -21,6 +21,7 @@ on:
 env:
   SCHEMATIC_FILE: pcb/KiCad/RedPitaya_Lockbox.kicad_sch
   PCB_FILE: pcb/KiCad/RedPitaya_Lockbox.kicad_pcb
+  KIBOT_CONFIG: pcb/KiCad/config.kibot.yaml
 
 jobs:
   tests:
@@ -69,6 +70,7 @@ jobs:
       - name: Run ERC
         uses: INTI-CMNB/KiBot@v2_k7
         with:
+          config: ${{ env.KIBOT_CONFIG }}
           schema: ${{ env.SCHEMATIC_FILE }}
           dir: generated
           skip: run_drc
@@ -94,6 +96,7 @@ jobs:
       - name: Run DRC
         uses: INTI-CMNB/KiBot@v2_k7
         with:
+          config: ${{ env.KIBOT_CONFIG }}
           board: ${{ env.PCB_FILE }}
           dir: generated
           skip: run_erc
@@ -120,7 +123,7 @@ jobs:
 
       - uses: INTI-CMNB/KiBot@v2_k7
         with:
-          config: config.kibot.yaml
+          config: ${{ env.KIBOT_CONFIG }}
           schema: ${{ env.SCHEMATIC_FILE }}
           board: ${{ env.PCB_FILE }}
           skip: run_erc,run_drc
