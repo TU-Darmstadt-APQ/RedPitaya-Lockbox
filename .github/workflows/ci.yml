@@ -114,7 +114,7 @@ jobs:
     needs: [ERC, DRC]
     strategy:
       matrix:
-        variant: [ 'default', 'HBME', 'TFP' ]
+        variant: [ 'default' ]
     steps:
       - name: Download repository
         uses: actions/checkout@v4
