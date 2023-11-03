@@ -20,6 +20,17 @@ The controller features:
 - Buffered monitoring outputs for piezo output and error signal input
 - Integrated 5 V / 2.5 A power supply for the RedPitaya board
 
+Design Files
+------------------
+The design files can be found on the [releases](../../releases) page and include the following resources:
+
+- Schematics as a PDF
+- Gerber files
+- Pick & place position files
+- Bill of materials as a CSV file and also as an interactive HTML version
+
+The latest revision of those files can be found [here](../../releases/latest).
+
 Related work
 --------------------
 Review of Scientific Instruments 91, 083001 (2020); [https://doi.org/10.1063/5.0009524](https://doi.org/10.1063/5.0009524)
