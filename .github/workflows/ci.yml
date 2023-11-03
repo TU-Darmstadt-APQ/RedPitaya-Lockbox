@@ -28,33 +28,44 @@ jobs:
     name: Run tests
     runs-on: ubuntu-latest
     outputs:
-      revision: ${{ steps.extract_sch_revision.outputs.revision }}
+      revision: ${{ steps.extract_sch_revision.outputs.value }}
+      basename: ${{ steps.repo-basename.outputs.value }}
 
     steps:
       - name: Download repository
         uses: actions/checkout@v4
 
+      - name: Parse repository name
+        id: repo-basename
+        run: |
+          echo "value=$(basename ${{ github.repository }})" >> $GITHUB_OUTPUT
+        shell: bash
+
       - name: Extract schematic revision
         id: extract_sch_revision
         run: |
-          echo "revision=$(perl -0777 -ne "print /\(title_block.+\(rev \"(.+?)\"\)/sg" ${{ env.SCHEMATIC_FILE }})" >>${GITHUB_OUTPUT}
+          echo "value=$(perl -0777 -ne "print /\(title_block.+\(rev \"(.+?)\"\)/sg" ${{ env.SCHEMATIC_FILE }})" >>${GITHUB_OUTPUT}
+        shell: bash
 
-      - name: Extract pcb revision
+      - name: Extract PCB revision
         id: extract_pcb_revision
         run: |
-          echo "revision=$(perl -0777 -ne "print /\(title_block.+\(rev \"(.+?)\"\)/sg" ${{ env.PCB_FILE }})" >>${GITHUB_OUTPUT}
+          echo "value=$(perl -0777 -ne "print /\(title_block.+\(rev \"(.+?)\"\)/sg" ${{ env.PCB_FILE }})" >>${GITHUB_OUTPUT}
+        shell: bash
 
       - name: Test if the revision number was extracted
-        if: steps.extract_sch_revision.outputs.revision == ''
+        if: steps.extract_sch_revision.outputs.value == ''
         run: |
           echo "::error::Failed to extract revision number from schematic file: ${{ env.SCHEMATIC_FILE }}"
           exit 1
+        shell: bash
 
       - name: Test schematic revision == pcb revision
-        if: steps.extract_sch_revision.outputs.revision != steps.extract_pcb_revision.outputs.revision
+        if: steps.extract_sch_revision.outputs.value != steps.extract_pcb_revision.outputs.value
         run: |
-          echo "::error::Revision number of the schematic (${{ steps.extract_sch_revision.outputs.revision }}) does not match PCB (${{ steps.extract_pcb_revision.outputs.revision }})"
+          echo "::error::Revision number of the schematic (${{ steps.extract_sch_revision.outputs.value }}) does not match PCB (${{ steps.extract_pcb_revision.outputs.value }}) revision."
           exit 1
+        shell: bash
 
   ERC:
     name: Run ERC
@@ -165,12 +176,13 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: ./manufacturing_files
+        shell: bash
 
       - name: Append BOM (bill of materials) as asset
         if: github.event.action == 'published'
         run: |
-          mv "./manufacturing_files/bom/bom_(${{ matrix.variant }}).zip" bom_${{ matrix.variant }}.zip
-          gh release upload ${{ github.ref_name }} bom_${{ matrix.variant }}.zip#"Bill of materials for ${{ matrix.variant }} variant (zip)" --repo ${{ github.repository }}
+          mv "./manufacturing_files/bom/bom_(${{ matrix.variant }}).zip" ${{ needs.tests.outputs.basename }}_bom_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip
+          gh release upload ${{ github.ref_name }} ${{ needs.tests.outputs.basename }}_bom_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip#"Bill of materials for the ${{ matrix.variant }} variant (zip)" --repo ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
@@ -178,8 +190,8 @@ jobs:
       - name: Append schematics as asset
         if: github.event.action == 'published'
         run: |
-          mv "./manufacturing_files/schematics/schematics_(${{ matrix.variant }}).pdf" schematics_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.pdf
-          gh release upload ${{ github.ref_name }} schematics_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.pdf#"Schematics for ${{ matrix.variant }} variant (pdf)" --repo ${{ github.repository }}
+          mv "./manufacturing_files/schematics/schematics_(${{ matrix.variant }}).pdf" ${{ needs.tests.outputs.basename }}_schematics_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.pdf
+          gh release upload ${{ github.ref_name }} ${{ needs.tests.outputs.basename }}_schematics_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.pdf#"Schematics for the ${{ matrix.variant }} variant (pdf)" --repo ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
@@ -187,8 +199,8 @@ jobs:
       - name: Append position files as asset
         if: github.event.action == 'published'
         run: |
-          mv "./manufacturing_files/gerber_files/pos_(${{ matrix.variant }}).zip" position_files_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip
-          gh release upload ${{ github.ref_name }} position_files_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip#"Pick & Place position files for ${{ matrix.variant }} variant (zip)" --repo ${{ github.repository }}
+          mv "./manufacturing_files/gerber_files/pos_(${{ matrix.variant }}).zip" ${{ needs.tests.outputs.basename }}_position_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip
+          gh release upload ${{ github.ref_name }} ${{ needs.tests.outputs.basename }}_position_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip#"Pick & Place position files for the ${{ matrix.variant }} variant (zip)" --repo ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
@@ -196,8 +208,8 @@ jobs:
       - name: Append Gerber files as asset
         if: github.event.action == 'published' && matrix.variant == 'default'
         run: |
-          mv "./manufacturing_files/gerber_files/gerbers.zip" gerber_files_${{ needs.tests.outputs.revision }}_all.zip
-          gh release upload ${{ github.ref_name }} gerber_files_${{ needs.tests.outputs.revision }}_all.zip#"Gerber files for all variants (zip)" --repo ${{ github.repository }}
+          mv "./manufacturing_files/gerber_files/gerbers.zip" ${{ needs.tests.outputs.basename }}_gerber_${{ needs.tests.outputs.revision }}_all.zip
+          gh release upload ${{ github.ref_name }} ${{ needs.tests.outputs.basename }}_gerber_${{ needs.tests.outputs.revision }}_all.zip#"Gerber files for all variants (zip)" --repo ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
