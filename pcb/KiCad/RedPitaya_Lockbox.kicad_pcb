@@ -3270,7 +3270,7 @@
       (net 131 "Net-(J1-Pin_a31)") (pinfunction "Pin_c31") (pintype "passive") (tstamp 8f76de1f-361a-4892-b0f8-396a8a59e8bd))
     (pad "c32" thru_hole circle locked (at 78.74 5.08 90) (size 1.55 1.55) (drill 1) (layers "*.Cu" "*.Mask")
       (net 132 "Net-(J1-Pin_a32)") (pinfunction "Pin_c32") (pintype "passive") (tstamp c3097129-3abe-4bb7-b36e-b25dc9630e56))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_DIN.3dshapes/DIN41612_C_2x32_Male_Horizontal_THT.wrl"
+    (model "${KIPRJMOD}/3D_models/DIN41612_C_2x32_Male_Horizontal_THT.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
