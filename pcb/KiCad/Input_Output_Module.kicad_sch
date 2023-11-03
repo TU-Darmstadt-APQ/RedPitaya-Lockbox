@@ -6,8 +6,8 @@
 
   (title_block
     (title "RedPitaya Lockbox")
-    (date "2023-08-08")
-    (rev "1.6.1")
+    (date "2023-11-03")
+    (rev "1.6.2")
     (company "Atoms-Photons-Quanta, Institut für Angewandte Physik, TU Darmstadt")
     (comment 1 "Tilman Preuschoff")
   )
