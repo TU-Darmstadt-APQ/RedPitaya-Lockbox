@@ -740,13 +740,11 @@
       (property "ki_description" "10V Precision Reference" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "LT1236-10_0_1"
-        (rectangle (start 7.62 7.62) (end -7.62 0)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
       (symbol "LT1236-10_1_1"
+        (rectangle (start -7.62 7.62) (end 7.62 0)
+          (stroke (width 0) (type default))
+          (fill (type background))
+        )
         (pin no_connect line (at -6.35 -2.54 90) (length 2.54) hide
           (name "NC" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
@@ -794,10 +792,10 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.524 1.524)) hide)
       )
-      (symbol "LT8610_0_0"
-        (rectangle (start -10.16 6.35) (end 10.16 40.64)
+      (symbol "LT8610_1_0"
+        (rectangle (start -10.16 40.64) (end 10.16 6.35)
           (stroke (width 0) (type default))
-          (fill (type none))
+          (fill (type background))
         )
       )
       (symbol "LT8610_1_1"
@@ -3049,7 +3047,7 @@
     (property "Value" "10k" (at 230.632 42.037 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "custom:Pin_Header_Straight_1x03_Pitch2.54mm_Friction_Lock" (at 232.41 43.18 0)
+    (property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" (at 232.41 43.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 232.41 43.18 0)

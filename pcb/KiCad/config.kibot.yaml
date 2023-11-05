@@ -9,7 +9,7 @@ preflight:
   filters:
     - filter: 'Custom 3D models were added to the footprints'
       error: lib_footprint_mismatch
-      regex: 'SMA_Amphenol_132134_Vertical|Coilcraft_MSS1278T|MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm|MSOP-16-1EP_3x4.039mm_P0.5mm_EP1.651x2.845mm|Pin_Header_Straight_1x03_Pitch2.54mm_Friction_Lock|DIN41612_C_2x32_Male_Horizontal_THT'
+      regex: 'SMA_Amphenol_132134_Vertical|Coilcraft_MSS1278T|MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm|MSOP-16-1EP_3x4.039mm_P0.5mm_EP1.651x2.845mm|DIN41612_C_2x32_Male_Horizontal_THT'
     - filter: 'Solder jumper do not work well with zone fills'
       error: clearance
       regex: '(?s)Polygon.*Zone'  # (?s) = enable dotall mode
