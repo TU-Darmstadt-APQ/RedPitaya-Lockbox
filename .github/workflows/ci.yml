@@ -88,7 +88,7 @@ jobs:
           targets: __NONE__  # Only run preflights
 
       - name: Retrieve results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ERC_Output
           path: generated
@@ -114,7 +114,7 @@ jobs:
           targets: __NONE__  # Only run preflights
 
       - name: Retrieve results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: DRC_Output
           path: generated
@@ -142,19 +142,19 @@ jobs:
           verbose: 0  # use 3 for debugging
 
       - name: Upload bill of materials files as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: bom
           path: bom_files_compressed
 
       - name: Upload schematic files as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: schematics
           path: schematics
 
       - name: Upload schematic files as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: gerber_files
           path: gerber_files_compressed
