@@ -75,8 +75,6 @@ jobs:
     steps:
       - name: Download repository
         uses: actions/checkout@v4
-        with:
-          submodules: true
 
       - name: Run ERC
         uses: INTI-CMNB/KiBot@v2_k7
@@ -88,7 +86,7 @@ jobs:
           targets: __NONE__  # Only run preflights
 
       - name: Retrieve results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ERC_Output
           path: generated
@@ -101,8 +99,6 @@ jobs:
     steps:
       - name: Download repository
         uses: actions/checkout@v4
-        with:
-          submodules: true
 
       - name: Run DRC
         uses: INTI-CMNB/KiBot@v2_k7
@@ -114,7 +110,7 @@ jobs:
           targets: __NONE__  # Only run preflights
 
       - name: Retrieve results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: DRC_Output
           path: generated
@@ -129,8 +125,6 @@ jobs:
     steps:
       - name: Download repository
         uses: actions/checkout@v4
-        with:
-          submodules: true
 
       - uses: INTI-CMNB/KiBot@v2_k7
         with:
@@ -142,21 +136,21 @@ jobs:
           verbose: 0  # use 3 for debugging
 
       - name: Upload bill of materials files as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: bom
+          name: bom-${{ matrix.variant }}
           path: bom_files_compressed
 
       - name: Upload schematic files as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: schematics
+          name: schematics-${{ matrix.variant }}
           path: schematics
 
       - name: Upload schematic files as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: gerber_files
+          name: gerber_files-${{ matrix.variant }}
           path: gerber_files_compressed
 
   release:
@@ -169,9 +163,15 @@ jobs:
         variant: [ 'default' ]
     steps:
       - name: Download manufacturing files artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          path: ./manufacturing_files
+          path: artifacts
+
+      - name: Merge artifacts
+        run: |
+          mkdir ./manufacturing_files
+          mv artifacts/*/* ./manufacturing_files
+        shell: bash
 
       - name: Display structure of downloaded files
         run: ls -R
