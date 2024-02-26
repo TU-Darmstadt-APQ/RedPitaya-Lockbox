@@ -170,7 +170,7 @@ jobs:
       - name: Merge artifacts
         run: |
           mkdir ./manufacturing_files
-          mv artifacts/*/* ./manufacturing_files
+          mv artifacts/*/*.zip ./manufacturing_files
         shell: bash
 
       - name: Display structure of downloaded files
