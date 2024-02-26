@@ -170,7 +170,7 @@ jobs:
       - name: Merge artifacts
         run: |
           mkdir ./manufacturing_files
-          mv artifacts/*/*.zip ./manufacturing_files
+          mv artifacts/* ./manufacturing_files/
         shell: bash
 
       - name: Display structure of downloaded files
@@ -181,7 +181,7 @@ jobs:
       - name: Append BOM (bill of materials) as asset
         if: github.event.action == 'published'
         run: |
-          mv "./manufacturing_files/bom/bom_(${{ matrix.variant }}).zip" ${{ needs.tests.outputs.basename }}_bom_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip
+          mv "./manufacturing_files/bom-${{ matrix.variant }}/bom_(${{ matrix.variant }}).zip" ${{ needs.tests.outputs.basename }}_bom_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip
           gh release upload ${{ github.ref_name }} ${{ needs.tests.outputs.basename }}_bom_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip#"Bill of materials for the ${{ matrix.variant }} variant (zip)" --repo ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -190,7 +190,7 @@ jobs:
       - name: Append schematics as asset
         if: github.event.action == 'published'
         run: |
-          mv "./manufacturing_files/schematics/schematics_(${{ matrix.variant }}).pdf" ${{ needs.tests.outputs.basename }}_schematics_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.pdf
+          mv "./manufacturing_files/schematics-${{ matrix.variant }}/schematics_(${{ matrix.variant }}).pdf" ${{ needs.tests.outputs.basename }}_schematics_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.pdf
           gh release upload ${{ github.ref_name }} ${{ needs.tests.outputs.basename }}_schematics_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.pdf#"Schematics for the ${{ matrix.variant }} variant (pdf)" --repo ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -199,7 +199,7 @@ jobs:
       - name: Append position files as asset
         if: github.event.action == 'published'
         run: |
-          mv "./manufacturing_files/gerber_files/pos_(${{ matrix.variant }}).zip" ${{ needs.tests.outputs.basename }}_position_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip
+          mv "./manufacturing_files/gerber_files-${{ matrix.variant }}/pos_(${{ matrix.variant }}).zip" ${{ needs.tests.outputs.basename }}_position_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip
           gh release upload ${{ github.ref_name }} ${{ needs.tests.outputs.basename }}_position_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip#"Pick & Place position files for the ${{ matrix.variant }} variant (zip)" --repo ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -208,7 +208,7 @@ jobs:
       - name: Append Gerber files as asset
         if: github.event.action == 'published' && matrix.variant == 'default'
         run: |
-          mv "./manufacturing_files/gerber_files/gerbers.zip" ${{ needs.tests.outputs.basename }}_gerber_${{ needs.tests.outputs.revision }}_all.zip
+          mv "./manufacturing_files/gerber_files-${{ matrix.variant }}/gerbers.zip" ${{ needs.tests.outputs.basename }}_gerber_${{ needs.tests.outputs.revision }}_all.zip
           gh release upload ${{ github.ref_name }} ${{ needs.tests.outputs.basename }}_gerber_${{ needs.tests.outputs.revision }}_all.zip#"Gerber files for all variants (zip)" --repo ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
