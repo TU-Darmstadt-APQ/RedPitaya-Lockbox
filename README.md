@@ -1,4 +1,5 @@
 [![Build manufacturing files](https://github.com/TU-Darmstadt-APQ/RedPitaya-Lockbox/actions/workflows/ci.yml/badge.svg)](https://github.com/TU-Darmstadt-APQ/RedPitaya-Lockbox/actions/workflows/ci.yml)
+[![Build manual](https://github.com/TU-Darmstadt-APQ/RedPitaya-Lockbox/actions/workflows/manual.yml/badge.svg)](https://github.com/TU-Darmstadt-APQ/RedPitaya-Lockbox/actions/workflows/manual.yml)
 
 Digital Controller for Laser Frequency Stabilization
 ===================
@@ -28,6 +29,7 @@ The design files can be found on the [releases](../../releases) page and include
 - Gerber files
 - Pick & place position files
 - Bill of materials as a CSV file and also as an interactive HTML version
+- User manual
 
 The latest revision of those files can be found [here](../../releases/latest).
 

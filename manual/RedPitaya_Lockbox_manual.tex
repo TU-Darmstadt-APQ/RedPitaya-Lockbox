@@ -21,6 +21,9 @@
 
 \DeclareRobustCommand\cs[1]{\texttt{\char`\\#1}}
 
+% BOARD-REVISION string will be replaced by the CI script with the latest
+% board revision number taken from the KiCad PCB files.
+% Do not change the BOARD-REVISION string!
 \title{RedPitaya Lockbox -- Manual\\
 	\textit{\normalsize{Latest board revision BOARD-REVISION}}}
 \author{Tilman Preuschoff}
@@ -29,7 +32,7 @@
 \emergencystretch1em  % F"ur TeX <3.0 auskommentieren!
 
 
-%\makeindex
+\makeindex
 
 
 \setcounter{tocdepth}{2}
@@ -58,13 +61,13 @@
 \index{RedPitaya OS}\marginlabel{Install the RedPitaya OS} Install the RedPitaya OS on a microSD card (4 GB min.) following the instructions on \href{https://redpitaya.readthedocs.io/en/latest/quickStart/SDcard/SDcard.html}{https://redpitaya.readthedocs.io/en/latest/quickStart/ SDcard/SDcard.html}. PyRPL has been tested with software release 0.94 to 0.99. Use the latest release if possible. Older releases can be found here: \href{http://downloads.redpitaya.com/downloads/}{http://downloads.redpitaya.com/ downloads/}. A local copy of the latest image can be found on $\backslash$$\backslash$brain42$\backslash$public$\backslash$Labortechnik $\backslash$Elektronik$\backslash$RedPitay$\backslash$Images. Insert the card in the SD slot of the RedPitaya after installation.
 
 \index{Offset resistors}\marginlabel{Remove the DC-offsets}
-Remove the noisy DC-offset for both fast RedPitaya outputs by removing the four resistors marked in Fig.~\ref{fig:offset}. Use a standard soldering iron. This shifts the output voltage range from $\pm$\SI{1}{\volt} to \SI{0}{\volt}--\SI{2}{\volt}. Additional information can be found on \href{https://ln1985blog.wordpress.com/2016/02/07/red-pitaya-dac-performance/}{https://ln1985blog.wordpress.com/ 2016/02/07/red-pitaya-dac-performance/}. After removing the resistors, label the board accordingly (e.g. 'offset removed').
+Remove the noisy DC-offset for both fast RedPitaya outputs by removing the four resistors marked in Fig.~\ref{fig:offset}. Use a standard soldering iron. This shifts the output voltage range from $\pm$\qty{1}{\volt} to \qty{0}{\volt}--\qty{2}{\volt}. Additional information can be found on \href{https://ln1985blog.wordpress.com/2016/02/07/red-pitaya-dac-performance/}{https://ln1985blog.wordpress.com/ 2016/02/07/red-pitaya-dac-performance/}. After removing the resistors, label the board accordingly (e.g. 'offset removed').
 
-\textbf{Note:} The software (PyRPL and STEMlab) will still display and assume a $\pm$\SI{1}{\volt} range.
+\textbf{Note:} The software (PyRPL and STEMlab) will still display and assume a $\pm$\qty{1}{\volt} range.
 
-\textbf{Note:} The default output is now \SI{1}{\volt} instead of \SI{0}{\volt}.
+\textbf{Note:} The default output is now \qty{1}{\volt} instead of \qty{0}{\volt}.
 
-\textbf{Note:} The RedPitaya output cannot drive a \SI{50}{\ohm}-load at \SI{2}{\volt}. Use a high-Z buffer (also in order to avoid cross talk between the two outputs).
+\textbf{Note:} The RedPitaya output cannot drive a \qty{50}{\ohm}-load at \qty{2}{\volt}. Use a high-Z buffer (also in order to avoid cross talk between the two outputs).
 \textbf{Edit:} In PCB Rev 1.4 a sufficient output buffer was added. 
 
 \begin{figure}[H]
@@ -73,7 +76,7 @@ Remove the noisy DC-offset for both fast RedPitaya outputs by removing the four 
 \end{figure}
 
 \index{Mount the RedPitaya}\marginlabel{Mount the RedPitaya board on the PCB}
-Move the four nylon PCB mounts of the RedPitaya to the other side of the board. Attach \SI{17}{\milli\meter} hexnut M3 distance bolts to the PCB mounts using headless M3-screws. Connect the RedPitaya board (upside down) to the 26-pin IDC-connector on the PCB. Fix the board using M3 pan head screws and M3 washers.
+Move the four nylon PCB mounts of the RedPitaya to the other side of the board. Attach \qty{17}{\milli\meter} hexnut M3 distance bolts to the PCB mounts using headless M3-screws. Connect the RedPitaya board (upside down) to the 26-pin IDC-connector on the PCB. Fix the board using M3 pan head screws and M3 washers.
 
 \textbf{Note:} The RedPitaya's MAC address is denoted on the network connector. Make sure to remember it since it will not be visible after mounting the board. 
 
@@ -81,7 +84,7 @@ Move the four nylon PCB mounts of the RedPitaya to the other side of the board. 
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{fig/Jumper_settings_photo.png}
-	\caption{Jumper settings for $\pm$\SI{1}{\volt} and $\pm$\SI{20}{\volt} input range.\label{fig:jumper}}
+	\caption{Jumper settings for $\pm$\qty{1}{\volt} and $\pm$\qty{20}{\volt} input range.\label{fig:jumper}}
 \end{figure}
 
 
@@ -99,7 +102,7 @@ Move the four nylon PCB mounts of the RedPitaya to the other side of the board. 
 \end{figure}
 
 \index{Front panel}\marginlabel{Install the front panel}
-Use a pre assembled front panel and three additional \SI{20}{\centi\meter} SMA cables. Fix the front panel on the lockbox PCB using two \SI{10}{\milli\meter} pan head M2.5 screws and M2.5 washers. Connect the cable according the table below.
+Use a pre assembled front panel and three additional \qty{20}{\centi\meter} SMA cables. Fix the front panel on the lockbox PCB using two \qty{10}{\milli\meter} pan head M2.5 screws and M2.5 washers. Connect the cable according the table below.
 
 \begin{tabular}{|c|c|c|}\hline
 \textbf{Front panel} & \textbf{PCB} 			& \textbf{RedPitaya}	\\\hline
@@ -124,7 +127,7 @@ PzOffset	& RV1			&			\\\hline
 
 \subsection{Power supply and network connection}
 \index{Power supply}\marginlabel{Power supply}
-The RedPitaya lockbox is mounted in a 19-inch Fischer rack mount unit with our standard power supply (DIN41612 C64A/C connector). A $\pm$\SI{15}{\volt} supply is recommended. 
+The RedPitaya lockbox is mounted in a 19-inch Fischer rack mount unit with our standard power supply (DIN41612 C64A/C connector). A \qty{\pm 15}{\volt} supply is recommended.
 
 \begin{maxipage}
 	\centering
@@ -132,8 +135,8 @@ The RedPitaya lockbox is mounted in a 19-inch Fischer rack mount unit with our s
 	{\small
 		\begin{tabular}{|c|c|c|c|}\hline
 			\textbf{Supply} & \textbf{Voltage range} & \textbf{Current@15\,V (typ./max.)}	& \textbf{Pin config. (default / Toptica)}  \\\hline
-			V+			& 12.5\,V to 20\,V		& 	 0.35\,A / 1.00\,A					& 1A, 1C, 2A, 2C	/  31A, 31C	 \\\hline	
-			V-			& -20\,V to -12.5\,V 	&		0.05\,A / 0.15\,A					& 31A, 31C, 32A 32C	/ 30A, 30C\\\hline	 
+			V+			& \qtyrange{12.5}{20}{\V}		& 	 \qty{0.35}{\A} / \qty{1.00}{\A}					& 1A, 1C, 2A, 2C	/  31A, 31C	 \\\hline
+			V-			& \qtyrange{-20}{-12.5}{\V} 	&		\qty{0.05}{\A} / \qty{0.15}{\A}					& 31A, 31C, 32A 32C	/ 30A, 30C\\\hline
 			GND			& -					&	-										& 16A, 16C, 17A, 17C, 18A, 18C  /  1A, 1C              \\\hline
 		\end{tabular}
 	}
@@ -179,7 +182,7 @@ Clone or download the branch 'external\_pid\_pause' from \href{https://github.co
 
 \textbf{Known issues:}
 \begin{itemize}
-	\item 'pid'-module: Output limits seem to have a \SI{-1}{\volt} offset resulting in a max. output of \SI{0}{\volt}. Applying a \SI{1}{\volt} DC-offset with the 'asg'-module fixes the problem.
+	\item 'pid'-module: Output limits seem to have a \qty{-1}{\volt} offset resulting in a max. output of \qty{0}{\volt}. Applying a \qty{1}{\volt} DC-offset with the 'asg'-module fixes the problem.
 	\item 'lockbox' module: 'sweep' is only activated when the 'pid'-module is active.
 \end{itemize}   
 
@@ -241,47 +244,47 @@ Make sure the path to the Anaconda directory is correct. At the first start, ope
 \subsection{Description of input and output functionalities}
 
 \index{Err In1}\marginlabel{Err In1}
-High-Z input for the frequency error signal buffered and fed to the RedPitaya input 1. Optionally, the signal can be attenuated or amplified internally by changing resistors on the board (see \href{https://github.com/TU-Darmstadt-APQ/RedPitaya-Lockbox/tree/master/pcb}{schematics} for details). Input voltage range: $\pm$\SI{10}{\volt}. Gain bandwidth product: \SI{35}{\mega\hertz}. The RedPitaya input will saturate at $\pm$\SI{1}{\volt} The rated max. input voltage for the RedPitaya is \SI{30}{\volt}. 
+High-Z input for the frequency error signal buffered and fed to the RedPitaya input 1. Optionally, the signal can be attenuated or amplified internally by changing resistors on the board (see \href{https://github.com/TU-Darmstadt-APQ/RedPitaya-Lockbox/tree/master/pcb}{schematics} for details). Input voltage range: $\pm$\qty{10}{\volt}. Gain bandwidth product: \qty{35}{\mega\hertz}. The RedPitaya input will saturate at $\pm$\qty{1}{\volt} The rated max. input voltage for the RedPitaya is \qty{30}{\volt}.
 
 \index{Err Mon}\marginlabel{Err Mon}
-Monitoring output for the (attenuated or amplified) error signal. Output voltage range: $\pm$\SI{10}{\volt}. Max. current: \SI{30}{\milli\ampere}. Do not load the output with $Z < \SI{500}{\ohm}$. 
+Monitoring output for the (attenuated or amplified) error signal. Output voltage range: $\pm$\qty{10}{\volt}. Max. current: \qty{30}{\milli\ampere}. Do not load the output with $Z < \qty{500}{\ohm}$.
 
 \index{Pz Out1}\marginlabel{Pz Out1}
-Piezo driver output for laser piezos. The output signal is the sum of the analog offset (Pz offset) and the RedPitaya output1 amplified by a factor of 10. The output can drive large capacitive loads at high frequencies. Internally the cut-off frequency is set to \SI{10}{\kilo\hertz}. Also, the series output resistor (\SI{4,7}{\ohm}) forms a second pole with the capacitance of the laser piezo at approximately \SI{10}{\kilo\hertz} (for our standard laser piezos).  Voltage range: $\pm$\SI{10}{\volt}. Max. current: \SI{250}{\milli\ampere}.
+Piezo driver output for laser piezos. The output signal is the sum of the analog offset (Pz offset) and the RedPitaya output1 amplified by a factor of 10. The output can drive large capacitive loads at high frequencies. Internally the cut-off frequency is set to \qty{10}{\kilo\hertz}. Also, the series output resistor (\qty{4,7}{\ohm}) forms a second pole with the capacitance of the laser piezo at approximately \qty{10}{\kilo\hertz} (for our standard laser piezos).  Voltage range: $\pm$\qty{10}{\volt}. Max. current: \qty{250}{\milli\ampere}.
 
 \index{Pz Mon}\marginlabel{Pz Mon}
-Monitoring output for the voltage applied to the laser piezo. Output voltage range: $\pm$\SI{10}{\volt}. Max. current: \SI{30}{\milli\ampere}. Do not load the output with $Z < \SI{500}{\ohm}$.
+Monitoring output for the voltage applied to the laser piezo. Output voltage range: $\pm$\qty{10}{\volt}. Max. current: \qty{30}{\milli\ampere}. Do not load the output with $Z < \qty{500}{\ohm}$.
 
 \index{Out2} \marginlabel{Out2}
-Control output for the laser current. Output voltage range: \SI{0}{\volt}--\SI{2}{\volt}. Max. current: \SI{30}{\milli\ampere}. PCB Rev. 1.4 and later include a gain 1 output buffer and two series first-order filters with cut-off frequencies at \SI{5}{\mega\hertz} and \SI{10}{\mega\hertz}. The frequencies and the gain can be chosen by modifying the PCB (see \href{https://github.com/TU-Darmstadt-APQ/RedPitaya-Lockbox/tree/master/pcb}{schematics}). For revisions earlier than 1.4 the RedPitaya's output is used without a buffer. In this case, no additional filtering is applied and the max. power rating is restricted to \SI{9}{\dBm}.
+Control output for the laser current. Output voltage range: \qty{0}{\volt}--\qty{2}{\volt}. Max. current: \qty{30}{\milli\ampere}. PCB Rev. 1.4 and later include a gain 1 output buffer and two series first-order filters with cut-off frequencies at \qty{5}{\mega\hertz} and \qty{10}{\mega\hertz}. The frequencies and the gain can be chosen by modifying the PCB (see \href{https://github.com/TU-Darmstadt-APQ/RedPitaya-Lockbox/tree/master/pcb}{schematics}). For revisions earlier than 1.4 the RedPitaya's output is used without a buffer. In this case, no additional filtering is applied and the max. power rating is restricted to \qty{9}{\dBm}.
 
 \index{In2} \marginlabel{In2}
-This input is directly connected to the RedPitaya input 2. This input is not used for laser locking. Use it for auxiliary functions (e.g. spectroscopic absorption signal, auto relock). Voltage range: $\pm$\SI{1}{\volt}. Bandwidth: \SI{50}{\mega\hertz}.
+This input is directly connected to the RedPitaya input 2. This input is not used for laser locking. Use it for auxiliary functions (e.g. spectroscopic absorption signal, auto relock). Voltage range: $\pm$\qty{1}{\volt}. Bandwidth: \qty{50}{\mega\hertz}.
 
 \index{Pz offset} \marginlabel{Pz offset}
-Sets the analog offset added to the RedPitaya piezo output via a precision potentiometer. Use the offset to conveniently find the error signal zero crossing while scanning. Both, the analog offset and the amplified RedPitaya output cover a $\pm$\SI{10}{\volt}-range. The piezo output will saturate when the sum exceeds $\pm$\SI{10}{\volt}. The offset can also be set by PyRPL software using the 'asg' feature.
+Sets the analog offset added to the RedPitaya piezo output via a precision potentiometer. Use the offset to conveniently find the error signal zero crossing while scanning. Both, the analog offset and the amplified RedPitaya output cover a $\pm$\qty{10}{\volt}-range. The piezo output will saturate when the sum exceeds $\pm$\qty{10}{\volt}. The offset can also be set by PyRPL software using the 'asg' feature.
 
 \subsection{Hardware application notes}
 
 \index{Error signal}\marginlabel{Error signal}
-The error signal amplitude should be matched to the $\pm$\SI{1}{\volt} RedPitaya input range. For smaller amplitudes the locking performance may be limited by the RedPitaya ADC quantization. Saturation of the input far from the lock point is acceptable, as long as it does not occur when the lock is active (e.g. frequency offset locks).  Exceeding the absolute maximum voltage of the analog input stage of $\pm$\SI{12.5}{\volt} damages the device. The maximal bandwidth of the input is much larger than the maximal control bandwidth of \SI{1.25}{\mega\hertz}. Moreover, the bandwidth is limited by the error signal bandwidth in most cases. Additional external filtering is recommended in order to reduce noise.
+The error signal amplitude should be matched to the $\pm$\qty{1}{\volt} RedPitaya input range. For smaller amplitudes the locking performance may be limited by the RedPitaya ADC quantization. Saturation of the input far from the lock point is acceptable, as long as it does not occur when the lock is active (e.g. frequency offset locks).  Exceeding the absolute maximum voltage of the analog input stage of $\pm$\qty{12.5}{\volt} damages the device. The maximal bandwidth of the input is much larger than the maximal control bandwidth of \qty{1.25}{\mega\hertz}. Moreover, the bandwidth is limited by the error signal bandwidth in most cases. Additional external filtering is recommended in order to reduce noise.
 
 \index{Actuator frequency response}\marginlabel{Actuator frequency response}
 The used actuators, the laser current and the piezo, shift the laser frequency in opposite directions. A larger piezo voltage leads to a shorter optical length of the external resonator and thus to a larger resonance frequency. While a larger current shifts the frequency of the emitted light to smaller values due to internal heating of the laser diode (and refractive index shifts due to larger charge density).  
 
 
 \index{Piezo output}\marginlabel{Piezo output}
-In our locking scheme, this output is used for compensating slow drifts with large amplitude (e.g. temperature, see next section for details). For our ECDL systems, the frequency sensitivity of the piezo is approximately \SI{+0.3}{\mega\hertz\per\milli\volt}. Hence, one amplified RedPitaya DAC step corresponds to about \SI{350}{\kilo\hertz}. This step occurs at the internal cut-off frequency of \SI{10}{\kilo\hertz} and cannot be fully compensated by the fast control loop. For all applications where fast piezo actions are not required, additional filtering with a low cut-off is recommended. For our laser piezos, a series resistance of \SI{1}{\kilo\ohm} is sufficient, due to the large piezo capacitance of about \SI{2.5}{\micro\farad}.
+In our locking scheme, this output is used for compensating slow drifts with large amplitude (e.g. temperature, see next section for details). For our ECDL systems, the frequency sensitivity of the piezo is approximately \qty{+0.3}{\mega\hertz\per\milli\volt}. Hence, one amplified RedPitaya DAC step corresponds to about \qty{350}{\kilo\hertz}. This step occurs at the internal cut-off frequency of \qty{10}{\kilo\hertz} and cannot be fully compensated by the fast control loop. For all applications where fast piezo actions are not required, additional filtering with a low cut-off is recommended. For our laser piezos, a series resistance of \qty{1}{\kilo\ohm} is sufficient, due to the large piezo capacitance of about \qty{2.5}{\micro\farad}.
 
 For piezo only locks, the large bandwidth is useful. Make sure there are no resonances within the control bandwidth. The piezo may be damaged by the device when driving it in resonance.  
 
 \index{Piezo offset}\marginlabel{Piezo offset}
-The variable piezo offset is only necessary for convenience. Operating the lock close to a piezo output of $\pm$\SI{10}{\volt} may cause an unstable locking behaviour due to railing of the output. Use the Pz Mon output to check the piezo voltage. Set the lock point close to \SI{0}{\volt} by adjusting the laser resonator temperature.  
+The variable piezo offset is only necessary for convenience. Operating the lock close to a piezo output of $\pm$\qty{10}{\volt} may cause an unstable locking behaviour due to railing of the output. Use the Pz Mon output to check the piezo voltage. Set the lock point close to \qty{0}{\volt} by adjusting the laser resonator temperature.
 
 \index{Laser current control}\marginlabel{Laser current control}
-Out2 is connected to the current modulation input of the laser current driver (APQ driver: 'Slow Mod'). In the implemented locking scheme, this control loop locks the laser to the error signal zero crossing. The large bandwidth of the actuator allows to reduce the laser linewidth. For the APQ driver and DgDrive, the RedPitaya's maximal control bandwidth of \SI{1.25}{\mega\hertz} is available via the modulation input. The transconductivity of the high-Z input is \SI{1}{\milli\ampere\per\volt} for both drivers. Depending on the laser diode type and current setpoint, this correspond to a shift of several \SI{100}{\mega\hertz\per\volt}. For most locks, it is necessary to reduce the influence of the RedPitaya DAC quantization by sufficient attenuation of the output. For optimal performance, make sure the controller uses at least about 100 DAC steps when the lock is activated. Typically a \SI{-10}{\decibel} inline attenuator is sufficient. This reduces the frequency range of the actuator to a few MHz which may cause problems when large (and fast) frequency steps are required in the experiment. Use ramps for slow, large frequency steps.
+Out2 is connected to the current modulation input of the laser current driver (APQ driver: 'Slow Mod'). In the implemented locking scheme, this control loop locks the laser to the error signal zero crossing. The large bandwidth of the actuator allows to reduce the laser linewidth. For the APQ driver and DgDrive, the RedPitaya's maximal control bandwidth of \qty{1.25}{\mega\hertz} is available via the modulation input. The transconductivity of the high-Z input is \qty{1}{\milli\ampere\per\volt} for both drivers. Depending on the laser diode type and current setpoint, this correspond to a shift of several \qty{100}{\mega\hertz\per\volt}. For most locks, it is necessary to reduce the influence of the RedPitaya DAC quantization by sufficient attenuation of the output. For optimal performance, make sure the controller uses at least about 100 DAC steps when the lock is activated. Typically a \qty{-10}{\decibel} inline attenuator is sufficient. This reduces the frequency range of the actuator to a few MHz which may cause problems when large (and fast) frequency steps are required in the experiment. Use ramps for slow, large frequency steps.
 
-Note, that the RedPitaya output cannot drive a \SI{50}{\ohm}-load at \SI{2}{\volt}. Avoid using the controller close to the maximum output voltage. The output has a bandwidth of \SI{50}{\mega\hertz}. An additional low-pass filter with a cut-off close to the control bandwidth reduces the output noise. Future revisions of the RedPitaya lockbox may include an output buffer and a filter.
+Note, that the RedPitaya output cannot drive a \qty{50}{\ohm}-load at \qty{2}{\volt}. Avoid using the controller close to the maximum output voltage. The output has a bandwidth of \qty{50}{\mega\hertz}. An additional low-pass filter with a cut-off close to the control bandwidth reduces the output noise. Future revisions of the RedPitaya lockbox may include an output buffer and a filter.
 
 Edit: Not relevant for PCB Rev. 1.4 and later.
 
@@ -290,7 +293,7 @@ Edit: Not relevant for PCB Rev. 1.4 and later.
 \section{Locking the laser with PyRPL}
 
 \subsection{Locking scheme}
-The pre configured example implements the following locking scheme: 'out2' acts directly on the laser current. The error signal is sampled via 'in1'. Via the 'lockbox' module, a PI-controller is implemented that locks the laser to the error signal zero crossing. In 'stage 0' only this loop is active for \SI{100}{\milli\second}. The laser should be locked properly now. In 'stage 1', the settings of 'stage 0' are left unchanged but an additional 'drift compensation' is activated, i.e. a slow I-controller acting on the laser piezo via 'out1'. The output of the first PI-controller (acting on the laser current) is used as a input for this control loop. Since the bandwidth of the piezo actuator is much smaller than the bandwidth of the first loop, this loop will keep the mean output of the fast PI at zero. This compensates for slow drifts and avoids saturation of 'out2'. 
+The pre configured example implements the following locking scheme: 'out2' acts directly on the laser current. The error signal is sampled via 'in1'. Via the 'lockbox' module, a PI-controller is implemented that locks the laser to the error signal zero crossing. In 'stage 0' only this loop is active for \qty{100}{\milli\second}. The laser should be locked properly now. In 'stage 1', the settings of 'stage 0' are left unchanged but an additional 'drift compensation' is activated, i.e. a slow I-controller acting on the laser piezo via 'out1'. The output of the first PI-controller (acting on the laser current) is used as a input for this control loop. Since the bandwidth of the piezo actuator is much smaller than the bandwidth of the first loop, this loop will keep the mean output of the fast PI at zero. This compensates for slow drifts and avoids saturation of 'out2'.
 
 
 
@@ -338,7 +341,7 @@ PyRPL features a unit conversion for the output signal and the setpoint unit to 
 
 \subsection{Set the PI parameters}
 \index{Calibrate the ADC offset}\marginlabel{Calibrate the ADC offset}
-The RedPitaya ADCs have considerable DC offsets and gain errors. The STEMlab software features a software calibration that is not used with PyRPL. Gain errors can be neglected since our setpoint is \SI{0}{\volt}. Nevertheless, the remaining DC offset leads to frequency offsets. The offsets have proven to be constant over time. In order to calibrate the input, terminate 'Err In1' with a \SI{50}{\ohm}-resistor (or short). Use the 'scope' module or 'calibrate' to determine the ADC DC-offset. In 'stage 0', set the setpoint to the obtained value multiplied by the chosen error signal slope (+1 or -1).
+The RedPitaya ADCs have considerable DC offsets and gain errors. The STEMlab software features a software calibration that is not used with PyRPL. Gain errors can be neglected since our setpoint is \qty{0}{\volt}. Nevertheless, the remaining DC offset leads to frequency offsets. The offsets have proven to be constant over time. In order to calibrate the input, terminate 'Err In1' with a \qty{50}{\ohm}-resistor (or short). Use the 'scope' module or 'calibrate' to determine the ADC DC-offset. In 'stage 0', set the setpoint to the obtained value multiplied by the chosen error signal slope (+1 or -1).
 
 
 \index{Current lock P-gain}\marginlabel{Current lock P-gain}
@@ -346,7 +349,7 @@ Use the piezo offset to set the laser frequency close to the error signal zero c
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{fig/P-crit.png}
-	\caption{ Error signal of the QUIPS C master lock at the critical P-gain (current). The signal shows large amplitude oscillations with a frequency of \SI{390}{\kilo\hertz}. \label{fig:Pcrit}}
+	\caption{ Error signal of the QUIPS C master lock at the critical P-gain (current). The signal shows large amplitude oscillations with a frequency of \qty{390}{\kilo\hertz}. \label{fig:Pcrit}}
 \end{figure}
 
 \index{Current lock I-gain}\marginlabel{Current lock I-gain} 
@@ -358,7 +361,7 @@ Set the piezo P-gain to zero and the I-gain to a small value, e.g. 10. Activate 
 \subsection{Fine tuning and examples}
 
 \index{Offset beat}\marginlabel{Offset beat}
-Fine tuning of the PI-parameters can be achieved by monitoring the beat signal with a spectrum analyser when the laser is locked. Make sure the master laser is locked properly before optimizing the parameters. Note, that this method does not yield a laser linewidth . The beat linewidth is however a good measure for the performance of the offset lock. For our offset locks, the performance is typically limited by the noise and bandwidth (\SI{250}{\kilo\hertz}) of the frequency to voltage converters. It should be possible to obtain a linewidth of the beat below \SI{150}{\kilo\hertz} (FWHM).    
+Fine tuning of the PI-parameters can be achieved by monitoring the beat signal with a spectrum analyser when the laser is locked. Make sure the master laser is locked properly before optimizing the parameters. Note, that this method does not yield a laser linewidth . The beat linewidth is however a good measure for the performance of the offset lock. For our offset locks, the performance is typically limited by the noise and bandwidth (\qty{250}{\kilo\hertz}) of the frequency to voltage converters. It should be possible to obtain a linewidth of the beat below \qty{150}{\kilo\hertz} (FWHM).
  
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{fig/offset_beat.png}
@@ -366,7 +369,7 @@ Fine tuning of the PI-parameters can be achieved by monitoring the beat signal w
 \end{figure}
 
 \index{Offset lock step response}\marginlabel{Offset lock step response}
-Most offset locks allow for a fast change of the offset frequency setpoint. For our frequency to voltage converters, apply a voltage pulse with an appropriate offset to the reference voltage input (e.g. using an oscilloscope with signal generator). Make sure the amplitude does not exceed the voltage range of the fast actuator (usually approximately \SI{1}{\volt}) and both levels are in the linear region of the converter (e.g. centred at \SI{5}{\volt}). Watch the step response of the control loop at the 'Err Mon' output. Tune the PI parameters for minimal transient time or minimal overshoot depending on your application.
+Most offset locks allow for a fast change of the offset frequency setpoint. For our frequency to voltage converters, apply a voltage pulse with an appropriate offset to the reference voltage input (e.g. using an oscilloscope with signal generator). Make sure the amplitude does not exceed the voltage range of the fast actuator (usually approximately \qty{1}{\volt}) and both levels are in the linear region of the converter (e.g. centred at \qty{5}{\volt}). Watch the step response of the control loop at the 'Err Mon' output. Tune the PI parameters for minimal transient time or minimal overshoot depending on your application.
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{fig/step_response.png}
