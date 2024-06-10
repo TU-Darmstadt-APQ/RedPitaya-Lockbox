@@ -1,4 +1,4 @@
-name: 'Build datasheet'
+name: 'Build manual'
 on:
   push:
     branches:
@@ -25,7 +25,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - uses: wtfjoke/setup-tectonic@v3
+      - name: Extract PCB revision
+        id: extract_pcb_revision
+        run: |
+          echo "value=$(perl -0777 -ne "print /\(title_block.+\(rev \"(.+?)\"\)/sg" ${{ env.PCB_FILE }})" >>${GITHUB_OUTPUT}
+        shell: bash
+
+      - name: Test if the revision number was extracted
+        if: steps.extract_pcb_revision.outputs.value == ''
+        run: |
+          echo "::error::Failed to extract revision number from schematic file: ${{ env.SCHEMATIC_FILE }}"
+          exit 1
+        shell: bash
+
+      - name: Set current board revision
+        run: |
+          sed -i '0,/BOARD-REVISION/{s/BOARD-REVISION/${{ steps.extract_pcb_revision.outputs.value }}/}' ${{ env.TEX_FILE }}
+        shell: bash
+
+        - uses: wtfjoke/setup-tectonic@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
