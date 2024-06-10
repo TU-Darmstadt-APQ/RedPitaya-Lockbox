@@ -16,6 +16,7 @@ on:
 env:
   TEX_FILE: manual/RedPitaya_Lockbox_manual.tex
   FILE_DESCRIPTION: Red Pitaya Lockbox Manual (pdf)
+  PCB_FILE: pcb/KiCad/RedPitaya_Lockbox.kicad_pcb
 
 jobs:
   build:
