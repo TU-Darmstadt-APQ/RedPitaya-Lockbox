@@ -1,0 +1,66 @@
+name: 'Build datasheet'
+on:
+  push:
+    branches:
+      - "**"
+    paths:
+      - 'manual/**'
+      - '.github/workflows/manual.yml'
+    # Ignore the push event when creating tags
+    tags-ignore:
+      - '[0-9]+.[0-9]+.[0-9]+'
+  release:
+    types:
+      - published
+
+env:
+  TEX_FILE: manual/RedPitaya_Lockbox_manual.tex
+  FILE_DESCRIPTION: Red Pitaya Lockbox Manual (pdf)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: wtfjoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run Tectonic
+        run:  tectonic ${{ env.TEX_FILE }}
+        shell: bash
+
+      - name: Strip file extension
+        id: filename
+        run: |
+          echo "value=$(echo ${{ env.TEX_FILE }} | sed -e 's/\.[^.]*$//')" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Set PDF output filename
+        id: output-filename
+        run: |
+          echo "value=${{ steps.filename.outputs.value }}.pdf" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Rename PDF
+        if: format('{0}{1}', steps.filename.outputs.value, '.pdf') != steps.output-filename.outputs.value
+        run: |
+          mv "${{ steps.filename.outputs.value }}.pdf" "${{ steps.output-filename.outputs.value }}"
+        shell: bash
+
+      - name: Upload PDF as artifact
+        if: github.event.action != 'published'
+        uses: actions/upload-artifact@v4
+        with:
+          name: datasheet
+          path: ${{ steps.output-filename.outputs.value }}
+
+      - name: Append PDF as an asset
+        if: github.event.action == 'published'
+        run: gh release upload ${{ github.ref_name }} ${{ steps.output-filename.outputs.value }}#"${{ env.FILE_DESCRIPTION }}" --repo ${{ github.repository }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
