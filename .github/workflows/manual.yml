@@ -43,7 +43,7 @@ jobs:
           sed -i '0,/BOARD-REVISION/{s/BOARD-REVISION/${{ steps.extract_pcb_revision.outputs.value }}/}' ${{ env.TEX_FILE }}
         shell: bash
 
-        - uses: wtfjoke/setup-tectonic@v3
+      - uses: wtfjoke/setup-tectonic@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
