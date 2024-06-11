@@ -2,17 +2,14 @@ kibot:
   version: 1
 
 preflight:
-  run_drc: true
-  run_erc: true
   update_xml: true
-  ignore_unconnected: false
-  filters:
-    - filter: 'Custom 3D models were added to the footprints'
-      error: lib_footprint_mismatch
-      regex: 'SMA_Amphenol_132134_Vertical|Coilcraft_MSS1278T|MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm|MSOP-16-1EP_3x4.039mm_P0.5mm_EP1.651x2.845mm|DIN41612_C_2x32_Male_Horizontal_THT'
-    - filter: 'Solder jumper do not work well with zone fills'
-      error: clearance
-      regex: '(?s)Polygon.*Zone'  # (?s) = enable dotall mode
+  drc:
+    ignore_unconnected: false
+  erc:
+    filters:
+      - filter: 'The coilcraft MSS1278T footprint is only available in KiCad 8.0.3+'
+        error: lib_footprint_issues
+        regex: 'L_Coilcraft_MSS1278T-XXX'
 
 variants:
   - name: 'default'
@@ -54,11 +51,11 @@ outputs:
       - 'B.Silkscreen'
       - 'F.Mask'
       - 'B.Mask'
+      - 'User.Comments'
+      - 'User.Drawings'
       - 'Edge.Cuts'
       - 'F.Fab'
       - 'B.Fab'
-      - 'User.Comments'
-      - 'User.Drawings'
 
   - name: 'excellon_drill'
     comment: 'Create the Excellon drill files to go with the Gerber files'
@@ -94,7 +91,7 @@ outputs:
     options:
       format: CSV
       conf: 'bom.ini'
-      output: '%sp_%I_%sr_(%V).%x'  # Note: The %v replacement is broken, so use _(%V) for now
+      output: '%f_%I_%sr_(%V).%x'  # Note: The %v replacement is broken, so use _(%V) for now
     output_id: 'bom'  # Used for the %I expansion int the output file name
 
   - name: 'iBOM'
@@ -105,7 +102,7 @@ outputs:
       dark_mode: false
       blacklist: 'LOGO*,TP*,H*'
       extra_fields: 'PN'
-      output: '%sp_%I_%sr%v.%x'
+      output: '%f_%I_%sr%v.%x'
       highlight_pin1: true
     output_id: 'ibom'  # Used for the %I expansion int the output file name
 
@@ -115,7 +112,7 @@ outputs:
     dir: schematics
     options:
       title: "+ (%V variant)"
-      output: '%I%v.%x'
+      output: '%f_%I_%sr%v.%x'
     output_id: 'schematics'  # Used for the %I expansion int the output file name
 
   - name: 'compress_bom'
@@ -137,7 +134,7 @@ outputs:
       files:
         - from_output: gerbers
         - from_output: excellon_drill
-      output: '%I.%x'
+      output: '%I%v.%x'
     output_id: 'gerbers'  # Used for the %I expansion int the output file name
 
   - name: 'compress_position'
