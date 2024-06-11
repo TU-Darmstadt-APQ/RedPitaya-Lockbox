@@ -33,6 +33,10 @@ The design files can be found on the [releases](../../releases) page and include
 
 The latest revision of those files can be found [here](../../releases/latest).
 
+Assembly Instructions
+------------------
+The latest assembly instructions can be found in the user manual. This user manual can be downloaded as a compiled PDF from the [releases](../../releases) page.
+
 Related work
 --------------------
 Review of Scientific Instruments 91, 083001 (2020); [https://doi.org/10.1063/5.0009524](https://doi.org/10.1063/5.0009524)

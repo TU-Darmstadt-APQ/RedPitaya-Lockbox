@@ -18,6 +18,7 @@
 \usepackage{float}
 
 \usepackage[iso,english]{isodate}
+\usepackage[labelformat=simple]{subcaption}
 
 \DeclareRobustCommand\cs[1]{\texttt{\char`\\#1}}
 
@@ -26,7 +27,7 @@
 % Do not change the BOARD-REVISION string!
 \title{RedPitaya Lockbox -- Manual\\
 	\textit{\normalsize{Latest board revision BOARD-REVISION}}}
-\author{Tilman Preuschoff}
+\author{Patrick Baus, Tilman Preuschoff, Tobias Schreiber}
 
 \date{Last modified: \today}
 \emergencystretch1em  % F"ur TeX <3.0 auskommentieren!
@@ -118,12 +119,47 @@ PzOffset	& RV1			&			\\\hline
 			& Curr\_In		& Out2		\\\hline
 \end{tabular}
 
-\textbf{Note:} In PCB Rev 1.4 an output buffer and filter for 'Out2'  (current) was added. For PCB revisions earlier than 1.4 connect the RedPitaya's output2 directly to the frontpanel (Out2).
+\textbf{Note:} In PCB Rev 1.4 an output buffer and filter for 'Out2'  (current) was added. For PCB revisions earlier than 1.4 connect the RedPitaya's output2 directly to the front panel (Out2).
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{fig/front_panel.png}
 	\caption{Pre-assembled front panel (RedPitaya IntStab).\label{fig:front_panel}}
 \end{figure}
+
+\index{Potentiometer}\marginlabel{Installing the potentiometer}
+The front panel requires a \num{10}-turn potentiometer. This needs to be correctly wired to a \href{Molex KK 254}{} connector on the PCB using three twisted stranded wires. The colour ode of these wires is
+\begin{itemize}
+	\item Black (GND, clockwise/CW)
+	\item Green (wiper/slider/S)
+	\item Yellow (reference, counterclockwise/CCW)
+\end{itemize}
+
+Do note, that the pin number on the Vishay 534 does not match the pin numbering given in the schematics. Use the CW and CCW  labels for orientation. This ensures that when turning the potentiometer clockwise an increasing voltage is added to the piezo output. Figure \ref{fig:potentiometer_example} shows two example pictures for both the Vishay 534 and its alternative, the Bourns 7276 potentiometer. Also shown is the Molex KK connector with the correct colour coding. Before soldering the wires to the potentiometer make sure you add shrink tubing as shown in figure \ref{fig:potentiometer_example_vishay}.
+
+\begin{figure}[H]
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{fig/potentiometer_vishay.jpg}
+		\caption{Vishay 534}
+		\label{fig:potentiometer_example_vishay}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{fig/potentiometer_bourns.jpg}
+		\caption{Bourns 7276}
+	\end{subfigure}
+	\caption{Example wiring for different potentiometers.}
+	\label{fig:potentiometer_example}
+\end{figure}
+
+Once the wires are soldered and before shrinking the shrink tubing, the result should look like shown in figure \ref{fig:potentiometer_assemby}. Do note the twisted stranded wires as well.
+
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{fig/potentiometer_finished.jpg}
+	\caption{Fully assembled potentiometer.}
+	\label{fig:potentiometer_assemby}
+\end{figure}
+
 
 \subsection{Power supply and network connection}
 \index{Power supply}\marginlabel{Power supply}
