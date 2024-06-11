@@ -5,11 +5,12 @@ preflight:
   update_xml: true
   drc:
     ignore_unconnected: false
-  erc:
     filters:
       - filter: 'The coilcraft MSS1278T footprint is only available in KiCad 8.0.3+'
         error: lib_footprint_issues
         regex: 'L_Coilcraft_MSS1278T-XXX'
+  erc:
+    enabled: true
 
 variants:
   - name: 'default'
