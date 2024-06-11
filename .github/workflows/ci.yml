@@ -9,8 +9,11 @@ on:
     paths:
       - '**.kicad_sch'
       - '**.kicad_pcb'
+      - 'pcb/KiCad/footprints.pretty/*'
+      - 'pcb/KiCad/libraries/*'
       - '.github/workflows/ci.yml'
       - 'pcb/KiCad/config.kibot.yaml'
+      - 'pcb/KiCad/bom.ini'
     # Ignore the push event when creating tags
     tags-ignore:
       - 'v?[0-9]+.[0-9]+.[0-9]+'
@@ -67,6 +70,13 @@ jobs:
           exit 1
         shell: bash
 
+      - name: Test for correct git tag
+        if: github.ref_type == 'tag' && github.ref_name !=  steps.extract_sch_revision.outputs.value
+        run: |
+          echo "::error::Revision number of the schematic/PCB (${{ steps.extract_sch_revision.outputs.value }}) does not match the Github tag (${{ github.ref_name }})."
+          exit 1
+        shell: bash
+
   ERC:
     name: Run ERC
     runs-on: ubuntu-latest
@@ -77,7 +87,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run ERC
-        uses: INTI-CMNB/KiBot@v2_k7
+        uses: INTI-CMNB/KiBot@v2_k8
         with:
           config: ${{ env.KIBOT_CONFIG }}
           schema: ${{ env.SCHEMATIC_FILE }}
@@ -85,11 +95,12 @@ jobs:
           skip: run_drc
           targets: __NONE__  # Only run preflights
 
-      - name: Retrieve results
+      - name: Upload results
         uses: actions/upload-artifact@v4
         with:
           name: ERC_Output
           path: generated
+          retention-days: 7
 
   DRC:
     name: Run DRC
@@ -101,7 +112,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run DRC
-        uses: INTI-CMNB/KiBot@v2_k7
+        uses: INTI-CMNB/KiBot@v2_k8
         with:
           config: ${{ env.KIBOT_CONFIG }}
           board: ${{ env.PCB_FILE }}
@@ -109,7 +120,7 @@ jobs:
           skip: run_erc
           targets: __NONE__  # Only run preflights
 
-      - name: Retrieve results
+      - name: Upload results
         uses: actions/upload-artifact@v4
         with:
           name: DRC_Output
@@ -126,7 +137,7 @@ jobs:
       - name: Download repository
         uses: actions/checkout@v4
 
-      - uses: INTI-CMNB/KiBot@v2_k7
+      - uses: INTI-CMNB/KiBot@v2_k8
         with:
           config: ${{ env.KIBOT_CONFIG }}
           schema: ${{ env.SCHEMATIC_FILE }}
@@ -138,20 +149,23 @@ jobs:
       - name: Upload bill of materials files as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: bom-${{ matrix.variant }}
+          name: manufacturing_files-bom-${{ matrix.variant }}
           path: bom_files_compressed
+          retention-days: 7
 
       - name: Upload schematic files as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: schematics-${{ matrix.variant }}
+          name: manufacturing_files-schematics-${{ matrix.variant }}
           path: schematics
+          retention-days: 7
 
-      - name: Upload schematic files as artifact
+      - name: Upload Gerber files as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: gerber_files-${{ matrix.variant }}
+          name: manufacturing_files-gerber-${{ matrix.variant }}
           path: gerber_files_compressed
+          retention-days: 7
 
   release:
     name: 'Upload manufacturing files to release'
@@ -165,13 +179,9 @@ jobs:
       - name: Download manufacturing files artifact
         uses: actions/download-artifact@v4
         with:
-          path: artifacts
-
-      - name: Merge artifacts
-        run: |
-          mkdir ./manufacturing_files
-          mv artifacts/* ./manufacturing_files/
-        shell: bash
+          path: manufacturing_files
+          pattern: manufacturing_files-*
+          merge-multiple: true
 
       - name: Display structure of downloaded files
         run: ls -R
@@ -181,7 +191,7 @@ jobs:
       - name: Append BOM (bill of materials) as asset
         if: github.event.action == 'published'
         run: |
-          mv "./manufacturing_files/bom-${{ matrix.variant }}/bom_(${{ matrix.variant }}).zip" ${{ needs.tests.outputs.basename }}_bom_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip
+          mv "./manufacturing_files/bom_(${{ matrix.variant }}).zip" ${{ needs.tests.outputs.basename }}_bom_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip
           gh release upload ${{ github.ref_name }} ${{ needs.tests.outputs.basename }}_bom_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip#"Bill of materials for the ${{ matrix.variant }} variant (zip)" --repo ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -190,7 +200,7 @@ jobs:
       - name: Append schematics as asset
         if: github.event.action == 'published'
         run: |
-          mv "./manufacturing_files/schematics-${{ matrix.variant }}/schematics_(${{ matrix.variant }}).pdf" ${{ needs.tests.outputs.basename }}_schematics_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.pdf
+          mv "./manufacturing_files/$(basename ${{ env.SCHEMATIC_FILE }} .kicad_sch)_schematics_${{ needs.tests.outputs.revision }}_(${{ matrix.variant }}).pdf" ${{ needs.tests.outputs.basename }}_schematics_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.pdf
           gh release upload ${{ github.ref_name }} ${{ needs.tests.outputs.basename }}_schematics_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.pdf#"Schematics for the ${{ matrix.variant }} variant (pdf)" --repo ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -199,7 +209,7 @@ jobs:
       - name: Append position files as asset
         if: github.event.action == 'published'
         run: |
-          mv "./manufacturing_files/gerber_files-${{ matrix.variant }}/pos_(${{ matrix.variant }}).zip" ${{ needs.tests.outputs.basename }}_position_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip
+          mv "./manufacturing_files/pos_(${{ matrix.variant }}).zip" ${{ needs.tests.outputs.basename }}_position_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip
           gh release upload ${{ github.ref_name }} ${{ needs.tests.outputs.basename }}_position_${{ needs.tests.outputs.revision }}_${{ matrix.variant }}.zip#"Pick & Place position files for the ${{ matrix.variant }} variant (zip)" --repo ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -208,7 +218,7 @@ jobs:
       - name: Append Gerber files as asset
         if: github.event.action == 'published' && matrix.variant == 'default'
         run: |
-          mv "./manufacturing_files/gerber_files-${{ matrix.variant }}/gerbers.zip" ${{ needs.tests.outputs.basename }}_gerber_${{ needs.tests.outputs.revision }}_all.zip
+          mv "./manufacturing_files/gerbers_(${{ matrix.variant }}).zip" ${{ needs.tests.outputs.basename }}_gerber_${{ needs.tests.outputs.revision }}_all.zip
           gh release upload ${{ github.ref_name }} ${{ needs.tests.outputs.basename }}_gerber_${{ needs.tests.outputs.revision }}_all.zip#"Gerber files for all variants (zip)" --repo ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
