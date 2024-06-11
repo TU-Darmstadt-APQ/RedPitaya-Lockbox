@@ -2981,6 +2981,102 @@
 				)
 			)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
 	)
 	(junction
 		(at 215.9 35.56)
@@ -3035,6 +3131,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "27bf261d-8547-475a-9494-a5c779d8f942")
+	)
+	(junction
+		(at 62.23 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2845a690-fcb4-42e3-976f-79621edaef65")
 	)
 	(junction
 		(at 138.43 156.21)
@@ -3560,16 +3662,6 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 129.54) (xy 59.69 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a1acab7-a6d3-4680-8ce6-2046517e1e9b")
-	)
-	(wire
-		(pts
 			(xy 138.43 153.67) (xy 138.43 156.21)
 		)
 		(stroke
@@ -3837,6 +3929,16 @@
 			(type default)
 		)
 		(uuid "5d3b9aec-8d59-4be7-9313-9db8fdd4c93f")
+	)
+	(wire
+		(pts
+			(xy 62.23 129.54) (xy 59.69 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e411aca-93a7-4443-a11c-5987492a6645")
 	)
 	(wire
 		(pts
@@ -4177,6 +4279,16 @@
 			(type default)
 		)
 		(uuid "99332785-d9f1-4363-9377-26ddc18e6d2c")
+	)
+	(wire
+		(pts
+			(xy 62.23 128.27) (xy 62.23 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99a644a8-c511-44ea-9277-ab57e3d40315")
 	)
 	(wire
 		(pts
@@ -4657,6 +4769,16 @@
 			(type default)
 		)
 		(uuid "ebca7c5e-ae52-43e5-ac6c-69a96a9a5b24")
+	)
+	(wire
+		(pts
+			(xy 62.23 129.54) (xy 85.09 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed8d42e2-37ba-4dc8-94a5-6884e00209f5")
 	)
 	(wire
 		(pts
@@ -8375,6 +8497,72 @@
 			(project "RedPitaya_Lockbox"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005b053798"
 					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 62.23 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "77be5125-423b-459b-830a-7aabc255681c")
+		(property "Reference" "#FLG01"
+			(at 62.23 126.365 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 62.23 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 62.23 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 62.23 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dc9ad700-d09b-40c8-b90b-2d1d7f6cf461")
+		)
+		(instances
+			(project "RedPitaya_Lockbox"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005b053798"
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
