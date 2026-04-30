@@ -36,7 +36,7 @@ jobs:
 
     steps:
       - name: Download repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Parse repository name
         id: repo-basename
@@ -84,7 +84,7 @@ jobs:
 
     steps:
       - name: Download repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Run ERC
         uses: INTI-CMNB/KiBot@v2_k8
@@ -109,7 +109,7 @@ jobs:
 
     steps:
       - name: Download repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Run DRC
         uses: INTI-CMNB/KiBot@v2_k8
@@ -135,7 +135,7 @@ jobs:
         variant: [ 'default' ]
     steps:
       - name: Download repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - uses: INTI-CMNB/KiBot@v2_k8
         with:
